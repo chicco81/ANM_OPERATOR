@@ -1,38 +1,15 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <body style="background:#000; color:#fff; font-family:Arial, sans-serif; margin:0; padding:0;">
-
-  <!-- LOGO CENTRATO IN ALTO -->
-  <div style="text-align:center; padding:20px 10px; background:#111; border-bottom:2px solid #444;">
-    <img src="ANM_Naples_logo.png" 
-         alt="Logo ANM Operator" 
-         style="max-width:280px; height:auto;">
-  </div>
-
-  <!-- TITOLO PRINCIPALE -->
-  <h1 style="text-align:center; margin:20px 0; font-size:1.8em;">ANM Operator Telegram</h1>
-
-  <!-- Qui puoi mettere il tuo calendario/turni o altro contenuto che avevi prima -->
-  <!-- Esempio placeholder per vedere qualcosa -->
-  <div style="text-align:center; padding:20px;">
-    <p>Benvenuto! Gestione turni operatori ANM Napoli</p>
-    <!-- Incolla qui il codice del calendario se ce l'avevi in un altro file o copia precedente -->
-  </div>
-
-</body>
-</html>
-
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"/>
 <meta name="theme-color" content="#080810"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<meta name="apple-mobile-web-app-title" content="ANM Operator Telegram"/>
+<meta name="apple-mobile-web-app-title" content="Operatore"/>
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="description" content="Gestione turni per operatori ANM Napoli"/>
-<title>ANM Operator Telegram</title>
-<!-- Forza apertura in Chrome su Android -->
+<title>Operatore</title>
 <meta http-equiv="X-UA-Compatible" content="chrome=1"/>
 <script>
 (function(){
@@ -43,15 +20,12 @@
   var isSafari = /Safari/i.test(ua) && !/Chrome/i.test(ua);
   var isInApp = /FBAN|FBAV|Instagram|Telegram|WhatsApp|Line|Twitter/i.test(ua);
 
-  // Se siamo già in Chrome o su desktop, non fare nulla
   if(isChrome && !isInApp) return;
   if(!isAndroid && !isIOS) return;
 
   var currentURL = window.location.href;
 
-  // Android: prova a lanciare Chrome via intent
   if(isAndroid && !isChrome){
-    // Mostra banner dopo 300ms per non bloccare il rendering
     window.addEventListener('DOMContentLoaded', function(){
       var banner = document.createElement('div');
       banner.id = 'chrome-banner';
@@ -60,7 +34,7 @@
         '<div style="background:#0e0e1e;border:1px solid rgba(255,107,53,.4);border-radius:20px;padding:28px 24px;max-width:340px;width:100%;text-align:center">',
         '<div style="font-size:48px;margin-bottom:12px">🌐</div>',
         '<div style="font-size:18px;font-weight:800;color:#fff;margin-bottom:8px">Apri con Chrome</div>',
-        '<div style="font-size:13px;color:#666;margin-bottom:24px;line-height:1.5">ANM Operator Telegram funziona meglio con Google Chrome. Installalo per usare tutte le funzioni.</div>',
+        '<div style="font-size:13px;color:#666;margin-bottom:24px;line-height:1.5">Operatore funziona meglio con Google Chrome. Installalo per usare tutte le funzioni.</div>',
         '<a href="intent://'+currentURL.replace(/^https?:\/\//,'')+  '#Intent;scheme=https;package=com.android.chrome;end" style="display:block;background:linear-gradient(135deg,#FF6B35,#FF3CAC);color:white;padding:14px;border-radius:12px;text-decoration:none;font-weight:800;font-size:15px;margin-bottom:10px">🚀 Apri in Chrome</a>',
         '<a href="https://play.google.com/store/apps/details?id=com.android.chrome" style="display:block;background:rgba(255,255,255,.06);color:#aaa;padding:12px;border-radius:12px;text-decoration:none;font-size:13px;margin-bottom:10px">Scarica Chrome dal Play Store</a>',
         '<button onclick="document.getElementById(\'chrome-banner\').remove()" style="background:none;border:none;color:#444;font-size:12px;cursor:pointer;padding:8px;font-family:sans-serif">Continua comunque →</button>',
@@ -70,7 +44,6 @@
     });
   }
 
-  // iOS: Safari è ok per installare come PWA, ma se siamo in una in-app browser avvisa
   if(isIOS && isInApp){
     window.addEventListener('DOMContentLoaded', function(){
       var banner = document.createElement('div');
@@ -80,7 +53,7 @@
         '<div style="background:#0e0e1e;border:1px solid rgba(255,107,53,.4);border-radius:20px;padding:28px 24px;max-width:340px;width:100%;text-align:center">',
         '<div style="font-size:48px;margin-bottom:12px">🌐</div>',
         '<div style="font-size:18px;font-weight:800;color:#fff;margin-bottom:8px">Apri in Safari</div>',
-        '<div style="font-size:13px;color:#666;margin-bottom:24px;line-height:1.5">Per installare ANM Operator Telegram come app e salvare i dati, aprilo in Safari.</div>',
+        '<div style="font-size:13px;color:#666;margin-bottom:24px;line-height:1.5">Per installare Operatore come app e salvare i dati, aprilo in Safari.</div>',
         '<button onclick="window.open(currentURL,\'_blank\')" style="display:block;width:100%;background:linear-gradient(135deg,#FF6B35,#FF3CAC);color:white;padding:14px;border-radius:12px;font-weight:800;font-size:15px;margin-bottom:10px;border:none;cursor:pointer;font-family:sans-serif">🧭 Apri in Safari</button>',
         '<button onclick="document.getElementById(\'chrome-banner\').remove()" style="background:none;border:none;color:#444;font-size:12px;cursor:pointer;padding:8px;font-family:sans-serif">Continua comunque →</button>',
         '</div></div>'
@@ -91,15 +64,15 @@
 })();
 </script>
 
-<!-- PWA Icons inline SVG as data URI -->
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23080810'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF6B35'/%3E%3Cstop offset='1' stop-color='%23FF3CAC'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='256' cy='256' r='180' fill='url(%23g)'/%3E%3Ctext x='256' y='310' text-anchor='middle' font-size='180' font-family='system-ui'>⏱%3C/text%3E%3C/svg%3E"/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080810'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='18' font-family='system-ui'>⏱%3C/text%3E%3C/svg%3E"/>
+<!-- PWA Icons -->
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23080810'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF6B35'/%3E%3Cstop offset='1' stop-color='%23FF3CAC'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='56' y='56' width='400' height='400' rx='80' fill='url(%23g)'/%3E%3Ctext x='256' y='340' text-anchor='middle' font-size='200' font-weight='900' font-family='Arial Black,sans-serif' fill='white'%3EANM%3C/text%3E%3C/svg%3E"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23080810'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF6B35'/%3E%3Cstop offset='1' stop-color='%23FF3CAC'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='28' height='28' rx='6' fill='url(%23g)'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-size='13' font-weight='900' font-family='Arial Black,sans-serif' fill='white'%3EANM%3C/text%3E%3C/svg%3E"/>
 
 <!-- Manifest inline -->
 <script>
 const manifestData = {
-  name: "ANM Operator Telegram",
-  short_name: "ANM Op TG",
+  name: "Operatore",
+  short_name: "Operatore",
   description: "Gestione turni operatori ANM Napoli",
   start_url: "./",
   display: "standalone",
@@ -107,7 +80,7 @@ const manifestData = {
   theme_color: "#080810",
   orientation: "portrait",
   icons: [
-    { src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23080810'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF6B35'/%3E%3Cstop offset='1' stop-color='%23FF3CAC'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='256' cy='256' r='180' fill='url(%23g)'/%3E%3Ctext x='256' y='310' text-anchor='middle' font-size='180'>⏱%3C/text%3E%3C/svg%3E", sizes: "512x512", type: "image/svg+xml" }
+    { src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='112' fill='%23080810'/%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23FF6B35'/%3E%3Cstop offset='1' stop-color='%23FF3CAC'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='56' y='56' width='400' height='400' rx='80' fill='url(%23g)'/%3E%3Ctext x='256' y='340' text-anchor='middle' font-size='200' font-weight='900' font-family='Arial Black,sans-serif' fill='white'%3EANM%3C/text%3E%3C/svg%3E", sizes: "512x512", type: "image/svg+xml" }
   ]
 };
 const blob = new Blob([JSON.stringify(manifestData)], {type:'application/json'});
@@ -149,7 +122,6 @@ if('serviceWorker' in navigator){
   #root { height: 100%; }
 </style>
 
-<!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet"/>
@@ -157,12 +129,11 @@ if('serviceWorker' in navigator){
 <body>
 <div id="root"></div>
 
-<!-- React + Babel -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
 
-<script type="text/babel">
+<script id="app-src" type="text/plain">
 const { useState, useMemo, useRef, useCallback, useEffect } = React;
 
 // ── COSTANTI ──────────────────────────────────────────────────────────────────
@@ -182,8 +153,51 @@ const dk     = (y,m,d) => `${y}-${String(m+1).padStart(2,"0")}-${String(d).padSt
 const calcH  = (s,e)   => { if(!s||!e) return 0; const [sh,sm]=s.split(":").map(Number),[eh,em]=e.split(":").map(Number); let d=(eh*60+em)-(sh*60+sm); if(d<0)d+=1440; return +(d/60).toFixed(2); };
 const fdow   = (y,m)   => { const r=new Date(y,m,1).getDay(); return r===0?6:r-1; };
 const daysIn = (y,m)   => new Date(y,m+1,0).getDate();
-const loadSt = ()      => { try{ const s=localStorage.getItem("anm_op_v1"); if(s) return JSON.parse(s); }catch(e){} return {shifts:{},custom:[],rotPat:[]}; };
-const saveSt = s       => { try{ localStorage.setItem("anm_op_v1",JSON.stringify(s)); }catch(e){} };
+// ── AUTH & STORAGE ───────────────────────────────────────────────────────────
+const ADMIN_MAT="50270",ADMIN_DOB="1981-07-29";
+const COLLEGHI_DEFAULT=[{"id": 17547000, "matricola": "17547", "nome": "Cicchetti Carlo"}, {"id": 17562000, "matricola": "17562", "nome": "Pirozzi Tullio"}, {"id": 17595000, "matricola": "17595", "nome": "Montanari Rosario"}, {"id": 17695000, "matricola": "17695", "nome": "Arischia Giovanni"}, {"id": 17717000, "matricola": "17717", "nome": "Morra Vincenzo"}, {"id": 17808000, "matricola": "17808", "nome": "Zinnai Donato"}, {"id": 17826000, "matricola": "17826", "nome": "Di Donato Francesco"}, {"id": 17851000, "matricola": "17851", "nome": "Izzo Giovanni"}, {"id": 17852000, "matricola": "17852", "nome": "Sateriale Carlo Alberto"}, {"id": 17956000, "matricola": "17956", "nome": "Tortorella Luigi"}, {"id": 18035000, "matricola": "18035", "nome": "Gagliotta Luigi"}, {"id": 18057000, "matricola": "18057", "nome": "Attanasio Ciro"}, {"id": 18113000, "matricola": "18113", "nome": "Mirone Francesco"}, {"id": 18128000, "matricola": "18128", "nome": "Stizzo Antonio"}, {"id": 18188000, "matricola": "18188", "nome": "Sorrentino Antonio"}, {"id": 18191000, "matricola": "18191", "nome": "Vacca Rosario"}, {"id": 18197000, "matricola": "18197", "nome": "Volpe Castrese"}, {"id": 18205000, "matricola": "18205", "nome": "Testa Umberto"}, {"id": 18219000, "matricola": "18219", "nome": "Rinaldis Carlo"}, {"id": 18220000, "matricola": "18220", "nome": "Luppino Salvatore"}, {"id": 18233000, "matricola": "18233", "nome": "Procope Giuseppe"}, {"id": 18375000, "matricola": "18375", "nome": "Sarnataro Patrizia"}, {"id": 18398000, "matricola": "18398", "nome": "Sorvino Serena"}, {"id": 18415000, "matricola": "18415", "nome": "Bentivoglio Marilena"}, {"id": 18416000, "matricola": "18416", "nome": "Poggi Giuseppina"}, {"id": 18481000, "matricola": "18481", "nome": "Varrecchia Anna"}, {"id": 18497000, "matricola": "18497", "nome": "Esposito Alfonso"}, {"id": 18591000, "matricola": "18591", "nome": "Cassandro Mariano"}, {"id": 18595000, "matricola": "18595", "nome": "Di Martino Massimiliano"}, {"id": 18609000, "matricola": "18609", "nome": "Cesarano Umberto"}, {"id": 18613000, "matricola": "18613", "nome": "Polito Claudio"}, {"id": 18628000, "matricola": "18628", "nome": "Pennone Antonio"}, {"id": 18644000, "matricola": "18644", "nome": "Nuzzo Gabriele"}, {"id": 18754000, "matricola": "18754", "nome": "Minichini Gennaro"}, {"id": 18759000, "matricola": "18759", "nome": "Del Duca Vittorio"}, {"id": 18760000, "matricola": "18760", "nome": "De Vita Francesco"}, {"id": 18765000, "matricola": "18765", "nome": "De Lucia Carmine"}, {"id": 18786000, "matricola": "18786", "nome": "Guida Pietro"}, {"id": 18791000, "matricola": "18791", "nome": "De Furia Ettore"}, {"id": 18845000, "matricola": "18845", "nome": "Catalano Alfredo"}, {"id": 18851000, "matricola": "18851", "nome": "Crespa Vincenzo"}, {"id": 18853000, "matricola": "18853", "nome": "De Sintas Diego"}, {"id": 18886000, "matricola": "18886", "nome": "Riboni Luigi"}, {"id": 18890000, "matricola": "18890", "nome": "Sepe Ciro"}, {"id": 18913000, "matricola": "18913", "nome": "Cuozzo Giuseppe"}, {"id": 18920000, "matricola": "18920", "nome": "Di Fusco Giuseppe"}, {"id": 18922000, "matricola": "18922", "nome": "Di Napoli Vitale"}, {"id": 18928000, "matricola": "18928", "nome": "Esposito Salvatore"}, {"id": 18935000, "matricola": "18935", "nome": "Guardascione Claudio"}, {"id": 18945000, "matricola": "18945", "nome": "Marciano Salvatore"}, {"id": 18962000, "matricola": "18962", "nome": "Ragno Giuseppe"}, {"id": 18968000, "matricola": "18968", "nome": "Rizzo Antonio"}, {"id": 18974000, "matricola": "18974", "nome": "Sepe Gianluca"}, {"id": 18975000, "matricola": "18975", "nome": "Sica Raffaele"}, {"id": 19067000, "matricola": "19067", "nome": "Tagliaferri Giacomo"}, {"id": 19874000, "matricola": "19874", "nome": "Limatola Ernesto"}, {"id": 19875000, "matricola": "19875", "nome": "Correale Immacolata"}, {"id": 19876000, "matricola": "19876", "nome": "D'aria Antonio"}, {"id": 19877000, "matricola": "19877", "nome": "Pappalardo Patrizio"}, {"id": 19878000, "matricola": "19878", "nome": "Aruta Gaetano"}, {"id": 19879000, "matricola": "19879", "nome": "Maresca Massimo"}, {"id": 19925000, "matricola": "19925", "nome": "Ammaturo Luigi"}, {"id": 19926000, "matricola": "19926", "nome": "Costantino Salvatore"}, {"id": 19932000, "matricola": "19932", "nome": "Manfredi Adele"}, {"id": 19933000, "matricola": "19933", "nome": "Manfredi Enrico"}, {"id": 19935000, "matricola": "19935", "nome": "Mastellone Gennaro"}, {"id": 19943000, "matricola": "19943", "nome": "Varchetta Salvatore"}, {"id": 19947000, "matricola": "19947", "nome": "Catelli Paolo"}, {"id": 19948000, "matricola": "19948", "nome": "Palumbo Giuditta"}, {"id": 19949000, "matricola": "19949", "nome": "Ruocco Rosanna"}, {"id": 19950000, "matricola": "19950", "nome": "Di Costanzo Cristian"}, {"id": 19953000, "matricola": "19953", "nome": "De Martino Francesco"}, {"id": 19954000, "matricola": "19954", "nome": "Napolano Alessio"}, {"id": 19956000, "matricola": "19956", "nome": "Melluso Fabrizio"}, {"id": 19962000, "matricola": "19962", "nome": "Nebbia Vittorio"}, {"id": 19963000, "matricola": "19963", "nome": "Parlato Luca"}, {"id": 19965000, "matricola": "19965", "nome": "Salemme Davide"}, {"id": 19966000, "matricola": "19966", "nome": "Marzano Giuseppe"}, {"id": 19968000, "matricola": "19968", "nome": "Pareto Giovambattista"}, {"id": 19977000, "matricola": "19977", "nome": "Capuano Fabrizio Antonio"}, {"id": 19982000, "matricola": "19982", "nome": "Spica Luca"}, {"id": 19992000, "matricola": "19992", "nome": "Mele Domenico"}, {"id": 19994000, "matricola": "19994", "nome": "Cacciapuoti Gaetano"}, {"id": 19996000, "matricola": "19996", "nome": "Varchetta Stefano"}, {"id": 19998000, "matricola": "19998", "nome": "Ripoli Angelo"}, {"id": 20000000, "matricola": "20000", "nome": "Luise Michele"}, {"id": 20002000, "matricola": "20002", "nome": "Tartaglia Guido"}, {"id": 20003000, "matricola": "20003", "nome": "Tricinelli Marisa"}, {"id": 20004000, "matricola": "20004", "nome": "Perna Maurizio"}, {"id": 20008000, "matricola": "20008", "nome": "Principe Roberto"}, {"id": 20010000, "matricola": "20010", "nome": "Paragliola Antonio"}, {"id": 20014000, "matricola": "20014", "nome": "Vitale Nunzia"}, {"id": 20029000, "matricola": "20029", "nome": "D'angelo Rosario"}, {"id": 20033000, "matricola": "20033", "nome": "Fano Walter"}, {"id": 20034000, "matricola": "20034", "nome": "Pagano Gugliemo"}, {"id": 20038000, "matricola": "20038", "nome": "Taliercio Gennaro"}, {"id": 20040000, "matricola": "20040", "nome": "Di Martino Daniele"}, {"id": 20042000, "matricola": "20042", "nome": "Perugino Luigi"}, {"id": 20051000, "matricola": "20051", "nome": "Pellecchia Emilio"}, {"id": 20052000, "matricola": "20052", "nome": "Gala Gennaro"}, {"id": 20065000, "matricola": "20065", "nome": "Polito Ciro"}, {"id": 20087000, "matricola": "20087", "nome": "Simeoli Michele"}, {"id": 20090000, "matricola": "20090", "nome": "De Rosa Antonio"}, {"id": 20093000, "matricola": "20093", "nome": "Scherillo Anna"}, {"id": 20098000, "matricola": "20098", "nome": "Di Luca Maria Rosa"}, {"id": 20099000, "matricola": "20099", "nome": "Ambrosino Luca"}, {"id": 20107000, "matricola": "20107", "nome": "Mangiapia Pasquale"}, {"id": 20113000, "matricola": "20113", "nome": "Scotto Francesco"}, {"id": 20131000, "matricola": "20131", "nome": "De Felice Rita"}, {"id": 20132000, "matricola": "20132", "nome": "Esposito Alexander"}, {"id": 20134000, "matricola": "20134", "nome": "Erasmo Daniele"}, {"id": 20135000, "matricola": "20135", "nome": "Quattromani Oriana"}, {"id": 20141000, "matricola": "20141", "nome": "Severino Raffaele"}, {"id": 20142000, "matricola": "20142", "nome": "Piccirillo Diego"}, {"id": 20143000, "matricola": "20143", "nome": "Calise Gennaro"}, {"id": 20146000, "matricola": "20146", "nome": "Guarino Antonio"}, {"id": 20147000, "matricola": "20147", "nome": "Parisi Simone"}, {"id": 20158000, "matricola": "20158", "nome": "Occhini Salvatore"}, {"id": 20162000, "matricola": "20162", "nome": "Fornaro Salvatore"}, {"id": 20165000, "matricola": "20165", "nome": "Arrichiello Salvatore"}, {"id": 20170000, "matricola": "20170", "nome": "Savanella Vincenzo"}, {"id": 20173000, "matricola": "20173", "nome": "Lo Giudice Immacolata"}, {"id": 20174000, "matricola": "20174", "nome": "Parlato Mario"}, {"id": 20175000, "matricola": "20175", "nome": "Scotto Di Covella Tobia"}, {"id": 20183000, "matricola": "20183", "nome": "Pecoraro Davide"}, {"id": 20184000, "matricola": "20184", "nome": "Del Vecchio Thayla"}, {"id": 20185000, "matricola": "20185", "nome": "Ruggiero Mario"}, {"id": 20186000, "matricola": "20186", "nome": "Caccia Domenico"}, {"id": 20187000, "matricola": "20187", "nome": "Leone Giulio"}, {"id": 20188000, "matricola": "20188", "nome": "Mallardo Carmine"}, {"id": 20209000, "matricola": "20209", "nome": "Marino Ferdinando"}, {"id": 20210000, "matricola": "20210", "nome": "Tattoli Giorgio"}, {"id": 50026000, "matricola": "50026", "nome": "Carangio Antonio"}, {"id": 50106000, "matricola": "50106", "nome": "Foglia Severino"}, {"id": 50119000, "matricola": "50119", "nome": "Protano Ferdinando"}, {"id": 50144000, "matricola": "50144", "nome": "Parmigiano Mariarosaria"}, {"id": 50150000, "matricola": "50150", "nome": "De Lise Antonio"}, {"id": 50152000, "matricola": "50152", "nome": "Setale Diegomaria"}, {"id": 50159000, "matricola": "50159", "nome": "Sammarco Fabio"}, {"id": 50161000, "matricola": "50161", "nome": "Amura Salvatore"}, {"id": 50163000, "matricola": "50163", "nome": "Acampora Carmela"}, {"id": 50191000, "matricola": "50191", "nome": "Del Mastro Davide"}, {"id": 50193000, "matricola": "50193", "nome": "Di Lorenzo Angela"}, {"id": 50204000, "matricola": "50204", "nome": "Iovine Luca"}, {"id": 50206000, "matricola": "50206", "nome": "Mignogna Salvatore"}, {"id": 50209000, "matricola": "50209", "nome": "Musto Pasquale"}, {"id": 50216000, "matricola": "50216", "nome": "Scognamiglio Antonio"}, {"id": 50244000, "matricola": "50244", "nome": "Accardo Giacomo"}, {"id": 50264000, "matricola": "50264", "nome": "Mosca Giuseppe"}, {"id": 50266000, "matricola": "50266", "nome": "Damiani Alessandro"}, {"id": 50270000, "matricola": "50270", "nome": "Esposito Ciro"}, {"id": 50272000, "matricola": "50272", "nome": "Mottola Nicola"}, {"id": 50274000, "matricola": "50274", "nome": "Schiattarella Vincenzo"}, {"id": 50275000, "matricola": "50275", "nome": "Monfrecola Salvatore"}, {"id": 50289000, "matricola": "50289", "nome": "Lupoli Franco"}, {"id": 50296000, "matricola": "50296", "nome": "Volpe Rosario"}, {"id": 50299000, "matricola": "50299", "nome": "Chiocca Bruno"}, {"id": 50302000, "matricola": "50302", "nome": "Iorio Lorenzo"}, {"id": 50303000, "matricola": "50303", "nome": "Cervizzi Simona"}, {"id": 50306000, "matricola": "50306", "nome": "Celona Danilo"}, {"id": 50308000, "matricola": "50308", "nome": "De Martino Bruna"}, {"id": 50311000, "matricola": "50311", "nome": "Di Lorenzo Ada"}, {"id": 50312000, "matricola": "50312", "nome": "Guillaro Maria"}, {"id": 50313000, "matricola": "50313", "nome": "Manco Raffaela"}, {"id": 50314000, "matricola": "50314", "nome": "Piscopo Natale"}, {"id": 50326000, "matricola": "50326", "nome": "Nasti Luciano"}, {"id": 50335000, "matricola": "50335", "nome": "Esposito Giuseppe"}, {"id": 50346000, "matricola": "50346", "nome": "Di Meo Letizia"}, {"id": 50357000, "matricola": "50357", "nome": "Raguseo Raffaele"}, {"id": 50359000, "matricola": "50359", "nome": "Caputo Enzo"}, {"id": 50362000, "matricola": "50362", "nome": "Vasto Andrea"}, {"id": 50365000, "matricola": "50365", "nome": "Spinosa Antonio"}, {"id": 50367000, "matricola": "50367", "nome": "Di Maro Mattia"}, {"id": 50368000, "matricola": "50368", "nome": "Scognamillo Giorgio"}, {"id": 50369000, "matricola": "50369", "nome": "Paragliola Vincenzo"}, {"id": 50371000, "matricola": "50371", "nome": "Barone Gianluigi"}, {"id": 50384000, "matricola": "50384", "nome": "Di Caterino Antonio"}, {"id": 50392000, "matricola": "50392", "nome": "D'oriano Marzia"}, {"id": 50393000, "matricola": "50393", "nome": "D'amico Dario"}, {"id": 50407000, "matricola": "50407", "nome": "Prigiobbo Marcello"}, {"id": 50413000, "matricola": "50413", "nome": "Pentagallo Raffaele"}, {"id": 50414000, "matricola": "50414", "nome": "Palescandolo Maurizio"}, {"id": 50417000, "matricola": "50417", "nome": "Pisaniello Andrea"}, {"id": 50418000, "matricola": "50418", "nome": "Cipullo Massimo"}, {"id": 50426000, "matricola": "50426", "nome": "Palma Catello"}, {"id": 50428000, "matricola": "50428", "nome": "Mangiapia Eugenio"}, {"id": 50429000, "matricola": "50429", "nome": "Zobi Stefano"}, {"id": 50430000, "matricola": "50430", "nome": "Aruta Natalino"}, {"id": 50431000, "matricola": "50431", "nome": "Scolavino Lorenzo"}, {"id": 50433000, "matricola": "50433", "nome": "Iacobelli Gennaro"}, {"id": 50434000, "matricola": "50434", "nome": "Di Falco Antonio"}, {"id": 50437000, "matricola": "50437", "nome": "Buzzella Francesco"}, {"id": 50440000, "matricola": "50440", "nome": "Pirotti Gennaro"}, {"id": 50441000, "matricola": "50441", "nome": "Pelella Francesco"}, {"id": 50443000, "matricola": "50443", "nome": "Tricinelli Giulio"}, {"id": 50444000, "matricola": "50444", "nome": "Raia Alfredo"}, {"id": 50445000, "matricola": "50445", "nome": "Argenziano Mariano"}, {"id": 50451000, "matricola": "50451", "nome": "Esposito Paolo"}, {"id": 50452000, "matricola": "50452", "nome": "Guardiano Roberto"}, {"id": 50454000, "matricola": "50454", "nome": "Bottone Andrea"}, {"id": 50457000, "matricola": "50457", "nome": "Tortorelli Carlo"}, {"id": 50459000, "matricola": "50459", "nome": "Marinelli Antonio"}, {"id": 50463000, "matricola": "50463", "nome": "Santonastaso Giovanni"}, {"id": 50464000, "matricola": "50464", "nome": "Esposito Alessandro"}, {"id": 50465000, "matricola": "50465", "nome": "Sacco Francesco"}, {"id": 50466000, "matricola": "50466", "nome": "Lagravanese Vincenzo"}, {"id": 50469000, "matricola": "50469", "nome": "Crisci Francesco"}, {"id": 50471000, "matricola": "50471", "nome": "Sautto Giovanni"}, {"id": 50472000, "matricola": "50472", "nome": "Cozzolino Giuseppe"}, {"id": 50473000, "matricola": "50473", "nome": "D'angelo Armando"}, {"id": 50474000, "matricola": "50474", "nome": "Frollo Mario"}, {"id": 50476000, "matricola": "50476", "nome": "Aprea Antonio"}, {"id": 50477000, "matricola": "50477", "nome": "Patrone Massimo"}, {"id": 50478000, "matricola": "50478", "nome": "Riccio Giovanni"}, {"id": 50479000, "matricola": "50479", "nome": "Pelerusso Ivano"}, {"id": 50480000, "matricola": "50480", "nome": "Sarnataro Carmine"}, {"id": 50481000, "matricola": "50481", "nome": "Giordano Marco"}, {"id": 50483000, "matricola": "50483", "nome": "Niespolo Luigi"}, {"id": 50485000, "matricola": "50485", "nome": "D'alesio Giovanni"}, {"id": 50486000, "matricola": "50486", "nome": "Di Cristo Bruno"}, {"id": 50488000, "matricola": "50488", "nome": "De Nardis Daniela"}, {"id": 50490000, "matricola": "50490", "nome": "Soldatino Vincenzo"}, {"id": 50491000, "matricola": "50491", "nome": "Laureto Pasquale Salvatore"}, {"id": 50492000, "matricola": "50492", "nome": "Bassi Giovanni"}, {"id": 50493000, "matricola": "50493", "nome": "Russo Vincenzo"}, {"id": 50519000, "matricola": "50519", "nome": "Paone Filippo"}, {"id": 50532000, "matricola": "50532", "nome": "Fulvio Ornella"}, {"id": 50534000, "matricola": "50534", "nome": "Valente Luca"}, {"id": 50537000, "matricola": "50537", "nome": "Mammalella Vincenzo"}, {"id": 50538000, "matricola": "50538", "nome": "Segreti Mattia"}, {"id": 50539000, "matricola": "50539", "nome": "Aruta Armando"}, {"id": 50540000, "matricola": "50540", "nome": "Varchetta Maila"}, {"id": 50542000, "matricola": "50542", "nome": "Senese Alessandro"}, {"id": 50543000, "matricola": "50543", "nome": "Grottola Luigi"}, {"id": 50546000, "matricola": "50546", "nome": "Paribello Pietro"}, {"id": 50547000, "matricola": "50547", "nome": "Di Biase Angelo"}, {"id": 50551000, "matricola": "50551", "nome": "Serse Vlarimiro"}, {"id": 50552000, "matricola": "50552", "nome": "Mastalia Giuseppe"}, {"id": 50553000, "matricola": "50553", "nome": "Mastalia Danilo"}, {"id": 50554000, "matricola": "50554", "nome": "Ceci Ciro"}, {"id": 50555000, "matricola": "50555", "nome": "Di Landa Ferdinando"}, {"id": 50556000, "matricola": "50556", "nome": "Puca Salvatore"}, {"id": 50557000, "matricola": "50557", "nome": "Lanzano Umberto"}, {"id": 50558000, "matricola": "50558", "nome": "Zerlengo Salvatore"}];
+function isAdmin(m){return String(m).trim()===ADMIN_MAT;}
+function getTipo(m){const n=parseInt(m)||0;return n>=14000&&n<=25000?"ANM":n>=50000&&n<=55000?"INT":"";}
+async function sha256(s){const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(s));return Array.from(new Uint8Array(b)).map(x=>x.toString(16).padStart(2,"0")).join("");}
+function getAccounts(){try{const s=localStorage.getItem("anm_accounts");if(s)return JSON.parse(s);}catch(e){}return{};}
+function setAccounts(a){try{localStorage.setItem("anm_accounts",JSON.stringify(a));}catch(e){}}
+function getSession(){try{return localStorage.getItem("anm_sess")||null;}catch(e){return null;}}
+function setSession(m){try{if(m)localStorage.setItem("anm_sess",m);else localStorage.removeItem("anm_sess");}catch(e){}}
+function getUserData(mat){try{const s=localStorage.getItem("anm_data_"+mat);if(s){const p=JSON.parse(s);if(!p.colleghi)p.colleghi=[...COLLEGHI_DEFAULT];return p;}}catch(e){}return{shifts:{},custom:[],rotPat:[],colleghi:[...COLLEGHI_DEFAULT]};}
+function saveUserData(mat,data){try{localStorage.setItem("anm_data_"+mat,JSON.stringify(data));}catch(e){}}
+function logAccess(mat,nome){try{const l=JSON.parse(localStorage.getItem("anm_log")||"[]");l.push({mat,nome,ts:Date.now()});if(l.length>100)l.splice(0,l.length-100);localStorage.setItem("anm_log",JSON.stringify(l));}catch(e){}}
+const loadSt=()=>getUserData(getSession()||"_g");
+const saveSt=s=>{if(getSession())saveUserData(getSession(),s);};
+// Festività
+function getEaster(y){const a=y%19,b=Math.floor(y/100),c=y%100,d=Math.floor(b/4),e=b%4,f=Math.floor((b+8)/25),g=Math.floor((b-f+1)/3),h=(19*a+b-d-g+15)%30,i=Math.floor(c/4),k=c%4,l=(32+2*e+2*i-h-k)%7,m=Math.floor((a+11*h+22*l)/451),mo=Math.floor((h+l-7*m+114)/31),dy=((h+l-7*m+114)%31)+1;return{month:mo-1,day:dy};}
+function getFestivita(y){const e=getEaster(y),r={};[[0,1,"Capodanno"],[0,6,"Epifania"],[3,25,"25 Aprile"],[4,1,"1 Maggio"],[5,2,"2 Giugno"],[7,15,"Ferragosto"],[10,1,"Ognissanti"],[11,8,"Immacolata"],[11,25,"Natale"],[11,26,"S.Stefano"]].forEach(([m,d,n])=>{r[dk(y,m,d)]=n;});const dk2=(y,m,d)=>`${y}-${String(m+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;r[dk2(y,e.month,e.day)]="Pasqua";const pm=new Date(y,e.month,e.day+1);r[dk2(pm.getFullYear(),pm.getMonth(),pm.getDate())]="Pasquetta";return r;}
+// Init admin
+(async()=>{const a=getAccounts();if(!a[ADMIN_MAT]){const h=await sha256(ADMIN_MAT);a[ADMIN_MAT]={pwdHash:h,dob:ADMIN_DOB,nome:"Esposito Ciro",createdAt:Date.now()};setAccounts(a);}})();
+
+// ── LOGO ANM SVG COMPONENT ────────────────────────────────────────────────────
+// Replica fedele del logo ufficiale ANM Napoli: fondo blu navy, "anm" arancione
+function ANMLogo({ size = 36 }) {
+  // Proporzioni originali logo ANM: circa 2.4:1 (larghezza:altezza)
+  const w = Math.round(size * 2.2);
+  const h = size;
+  return (
+    <svg width={w} height={h} viewBox="0 0 88 36" xmlns="http://www.w3.org/2000/svg">
+      {/* Sfondo blu navy con angoli arrotondati */}
+      <rect width="88" height="36" rx="5" fill="#1a1f8c"/>
+      {/* Lettere "anm" minuscole in arancione/giallo ANM */}
+      <text
+        x="44"
+        y="27"
+        textAnchor="middle"
+        fontFamily="Arial, Helvetica, sans-serif"
+        fontWeight="bold"
+        fontSize="26"
+        fill="#f5a623"
+        letterSpacing="1"
+      >anm</text>
+    </svg>
+  );
+}
 
 // ── CSS GLOBALE ───────────────────────────────────────────────────────────────
 const G = `
@@ -193,8 +207,8 @@ const G = `
 .hdr{position:relative;z-index:10;background:linear-gradient(180deg,#0d0d1a 0%,transparent 100%);padding:env(safe-area-inset-top,16px) 18px 0;flex-shrink:0}
 .hdr-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0 10px}
 .logo{display:flex;align-items:center;gap:9px}
-.logo-mark{width:32px;height:32px;background:linear-gradient(135deg,#FF6B35,#FF3CAC);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px;box-shadow:0 0 20px rgba(255,107,53,.4)}
-.logo-txt{font-size:19px;font-weight:800;letter-spacing:-0.8px;background:linear-gradient(90deg,#fff 60%,#888);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.logo-mark{display:flex;align-items:center;justify-content:center;filter:drop-shadow(0 2px 8px rgba(26,31,140,.5))}
+.logo-txt{font-size:15px;font-weight:800;letter-spacing:-0.8px;background:linear-gradient(90deg,#fff 60%,#888);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .mnav{display:flex;align-items:center;gap:10px}
 .mnav-btn{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.09);border-radius:7px;width:30px;height:30px;cursor:pointer;color:#aaa;font-size:15px;display:flex;align-items:center;justify-content:center}
 .mnav-btn:active{background:rgba(255,107,53,.2);border-color:rgba(255,107,53,.4);color:#FF6B35}
@@ -359,6 +373,72 @@ const G = `
 @keyframes slideUp{from{transform:translateY(12px);opacity:0}to{transform:translateY(0);opacity:1}}
 .slide-up{animation:slideUp .22s ease}
 @keyframes popIn{from{transform:scale(.85);opacity:0}to{transform:scale(1);opacity:1}}
+
+.light{background:#F0F2F8!important}
+.light .hdr{background:linear-gradient(180deg,#E8EAFF 0%,transparent 100%)!important}
+.light .mnav-month{color:#1a1a2e!important}.light .mnav-year{color:#888!important}
+.light .mode-btn{background:rgba(0,0,0,.04)!important;border-color:rgba(0,0,0,.1)!important;color:#777!important}
+.light .mode-btn.active{background:rgba(255,107,53,.12)!important;border-color:rgba(255,107,53,.4)!important;color:#c04010!important}
+.light .day{background:rgba(255,255,255,.9)!important;border-color:rgba(0,0,0,.08)!important}
+.light .day-num{color:#bbb!important}
+.light .day-num.today{color:#FF6B35!important}
+.light .cal-dh-cell{color:#aaa!important}
+.light .range-hint{color:#c04010!important}
+.light .logo-txt{background:linear-gradient(90deg,#1a1a2e 60%,#555)!important;-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.light .mnav-btn{background:rgba(0,0,0,.06)!important;border-color:rgba(0,0,0,.1)!important;color:#555!important}
+.light .bnav{background:rgba(240,242,248,.97)!important;border-top:1px solid rgba(0,0,0,.08)!important}
+.light .bni-lbl{color:#aaa!important}.light .bni.on .bni-lbl{color:#c04010!important}
+.light .dpanel{background:#fff!important}.light .dpanel-row{background:rgba(0,0,0,.04)!important}
+.light .dpanel-row-value,.light .dpanel-title{color:#1a1a2e!important}
+.light .strip,.light .modal{background:#fff!important}
+.light .vettura-inp,.light .note-inp,.light .finp,.light .date-inp{background:rgba(0,0,0,.05)!important;border-color:rgba(0,0,0,.1)!important;color:#1a1a2e!important}
+.light .esporta-card{background:rgba(255,255,255,.95)!important;border-color:rgba(0,0,0,.08)!important}
+.light .esporta-card-title,.light .ph{color:#1a1a2e!important}
+.light .esporta-card-desc,.light .ps,.light .sc-time{color:#666!important}
+.light .rot-block,.light .stat-box,.light .sc{background:rgba(255,255,255,.85)!important;border-color:rgba(0,0,0,.08)!important}
+.light .guasti-list{background:rgba(255,255,255,.7)!important;border-color:rgba(0,0,0,.07)!important}
+.light .toast{background:#fff!important;color:#c04010!important;border-color:rgba(255,107,53,.35)!important}
+.light .guasto-textarea,.light .cycle-builder{background:rgba(0,0,0,.04)!important}
+.light .modal-title{color:#1a1a2e!important}
+/* Nuovi stili */
+.pin-screen{position:fixed;inset:0;z-index:8000;background:rgba(8,8,16,.97);backdrop-filter:blur(20px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+.pin-dots{display:flex;gap:14px}
+.pin-dot{width:16px;height:16px;border-radius:50%;border:2px solid #FF6B35}
+.pin-dot.on{background:#FF6B35}
+.pin-pad{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+.pin-btn{width:70px;height:70px;border-radius:50%;border:1.5px solid rgba(255,255,255,.15);background:rgba(255,255,255,.06);color:#E2E2F0;font-size:22px;font-weight:700;cursor:pointer;font-family:'JetBrains Mono',monospace;transition:background .1s}
+.pin-btn:active{background:rgba(255,107,53,.3)!important;border-color:#FF6B35!important}
+.srow{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:13px 15px;margin-bottom:8px;cursor:pointer}
+.srow-ic{font-size:20px;width:28px;text-align:center;flex-shrink:0}
+.srow-body{flex:1}
+.srow-title{font-size:14px;font-weight:700;color:#E2E2F0}
+.srow-sub{font-size:11px;color:#555;margin-top:2px}
+.srow-right{font-size:14px;color:#444;opacity:.5;flex-shrink:0}
+.light .srow{background:rgba(0,0,0,.04)!important;border-color:rgba(0,0,0,.08)!important}
+.light .srow-title{color:#1a1a2e!important}
+/* Login */
+.ls{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;font-family:Arial,sans-serif;background:#f0f0f0}
+.ls-hdr{background:#1a1f8c;display:flex;align-items:center;justify-content:space-between;padding:0 14px;height:50px;flex-shrink:0}
+.ls-hdr-r{color:#f5a623;font-size:17px;font-weight:900;letter-spacing:2px;font-style:italic}
+.ls-body{flex:1;display:flex;align-items:flex-start;justify-content:center;padding:28px 18px 20px;overflow-y:auto}
+.ls-card{background:#fff;border:1px solid #ccc;padding:24px 28px;width:100%;max-width:360px;box-sizing:border-box}
+.ls-tit{color:#1a1f8c;font-size:14px;font-weight:700;text-transform:uppercase;border-bottom:2px solid #f5a623;padding-bottom:9px;margin-bottom:20px}
+.ls-lbl{font-size:11px;font-weight:700;color:#1a1f8c;text-transform:uppercase;display:block;margin-bottom:4px}
+.ls-inp{background:#f5f5f5;border:1px solid #aaa;padding:8px 10px;color:#222;font-family:'Courier New',monospace;font-size:15px;font-weight:700;outline:none;width:100%;box-sizing:border-box;margin-bottom:14px}
+.ls-inp:focus{border-color:#1a1f8c;background:#fff}
+.ls-inp.er{border-color:#cc0000}
+.ls-row{display:flex;gap:8px;margin-bottom:12px}
+.ls-btn{background:#1a1f8c;border:none;color:#fff;padding:8px 20px;cursor:pointer;font-size:13px;font-weight:700}
+.ls-btn:disabled{opacity:.5}
+.ls-btn2{background:#e0e0e0;border:1px solid #aaa;color:#333;padding:8px 16px;cursor:pointer;font-size:13px;font-weight:700}
+.ls-lnk{background:none;border:none;color:#1a1f8c;font-size:12px;cursor:pointer;text-decoration:underline;padding:3px 0;display:block;text-align:left;font-family:Arial,sans-serif}
+.ls-err{font-size:12px;color:#cc0000;font-weight:600;margin-bottom:8px}
+.ls-rem{display:flex;align-items:center;gap:8px;font-size:12px;color:#444;cursor:pointer;margin-bottom:12px}
+.ls-rem input{accent-color:#1a1f8c}
+.ls-sep{border:none;border-top:1px solid #ddd;margin:10px 0}
+.ls-ftr{background:#f5a623;height:26px;flex-shrink:0;display:flex;align-items:center;padding:0 14px}
+.ls-ftr-t{font-size:11px;color:#1a1f8c;font-weight:700;font-family:Arial,sans-serif}
+
 `;
 
 // ── TOAST HOOK ─────────────────────────────────────────────────────────────
@@ -442,11 +522,11 @@ function DayPanel({dayDetail,mo,yr,vetture,vetturaInput,setVetturaInput,addVettu
 }
 
 // ── APP PRINCIPALE ────────────────────────────────────────────────────────────
-function ANMOperator() {
+function ANMOperator({utente='',onLogout=()=>{},darkMode=true,toggleTheme=()=>{}}) {
   const today = new Date();
   const [yr,setYr]   = useState(today.getFullYear());
   const [mo,setMo]   = useState(today.getMonth());
-  const [st,setSt]   = useState(loadSt);
+  const [st,setSt]   = useState(()=>getUserData(utente||'_g'));
   const [tab,setTab] = useState("cal");
   const [toast,fire] = useToast();
   const [rangeA,setRangeA] = useState(null);
@@ -462,6 +542,18 @@ function ANMOperator() {
   const [ns,setNs] = useState({label:"",icon:"⚡",color:"#6366F1",start:"08:00",end:"16:00"});
   const [importData,setImportData] = useState(null);
   const importRef = useRef();
+  const backupRef  = useRef();
+  function esportaBackup(){
+    const blob=new Blob([JSON.stringify(st,null,2)],{type:"application/json"});
+    const url=URL.createObjectURL(blob);
+    const now=new Date();
+    const nome=`backup_${now.getFullYear()}${String(now.getMonth()+1).padStart(2,"0")}${String(now.getDate()).padStart(2,"0")}_${utente}.json`;
+    if(navigator.share&&navigator.canShare({files:[new File([blob],nome,{type:"application/json"})]})){
+      navigator.share({files:[new File([blob],nome,{type:"application/json"})],title:"Backup"}).then(()=>fire("✓ Condiviso!")).catch(()=>_dl(url,nome));
+    }else _dl(url,nome);
+  }
+  function _dl(url,nome){const a=document.createElement("a");a.href=url;a.download=nome;document.body.appendChild(a);a.click();document.body.removeChild(a);URL.revokeObjectURL(url);fire("✓ Backup: "+nome);}
+  function importaBackup(e){const f=e.target.files[0];if(!f)return;e.target.value="";const r=new FileReader();r.onload=ev=>{try{const d=JSON.parse(ev.target.result);if(!d.shifts)throw new Error("File non valido");setSt(d);fire("✓ "+Object.keys(d.shifts).length+" turni ripristinati!");}catch(ex){fire("❌ "+ex.message);}};r.readAsText(f);}
   const [dayDetail,setDayDetail]   = useState(null);
   const [vetture,setVetture]       = useState([]);
   const [vetturaInput,setVetturaInput] = useState("");
@@ -483,7 +575,6 @@ function ANMOperator() {
   const [showInstall,setShowInstall] = useState(false);
   const [isInstalled,setIsInstalled] = useState(false);
 
-  // Rileva se già installata come PWA
   useEffect(()=>{
     if(window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone) {
       setIsInstalled(true);
@@ -493,10 +584,11 @@ function ANMOperator() {
     return ()=>window.removeEventListener('beforeinstallprompt', handler);
   },[]);
 
-  // Salva su localStorage ad ogni cambio
-  useEffect(()=>{ saveSt(st); },[st]);
+  useEffect(()=>{if(utente)saveUserData(utente,st);},[st,utente]);
 
   const allShifts = useMemo(()=>[...PRESET_SHIFTS,...st.custom],[st.custom]);
+  const festivita  = useMemo(()=>getFestivita(yr),[yr]);
+  const updateSt   = useCallback((fn)=>setSt(p=>typeof fn==='function'?fn(p):fn),[]);
 
   function installPWA(){
     if(deferredPrompt){
@@ -695,7 +787,7 @@ function ANMOperator() {
     const dataStr=`${DAYS_IT[d.getDay()]} ${d.getDate()} ${MESI_IT[d.getMonth()]} ${d.getFullYear()}`;
     const vets=(data.note||"").match(/Vettura:\s*([\w]+)/g)||[];
     const saes=(data.note||"").match(/SAE:\s*([\w]+)/g)||[];
-    const rows=["🔄 CAMBIO TURNO",`📅 ${dataStr}`,`${sh.icon} ${sh.label}`,sh.start?`🕐 ${sh.start} – ${sh.end}`:"",sh.linea?`🚍 Linea ${sh.linea}`:"",vets.length?`🚌 Vettura: ${vets.map(v=>v.replace(/Vettura:\s*/,"")).join(", ")}`:"",saes.length?`🔖 SAE: ${saes.map(s=>s.replace(/SAE:\s*/,"")).join(", ")}`:"","📱 ANM Operator Telegram"].filter(r=>r!=="");
+    const rows=["🔄 CAMBIO TURNO",`📅 ${dataStr}`,`${sh.icon} ${sh.label}`,sh.start?`🕐 ${sh.start} – ${sh.end}`:"",sh.linea?`🚍 Linea ${sh.linea}`:"",vets.length?`🚌 Vettura: ${vets.map(v=>v.replace(/Vettura:\s*/,"")).join(", ")}`:"",saes.length?`🔖 SAE: ${saes.map(s=>s.replace(/SAE:\s*/,"")).join(", ")}`:"","📱 Operatore"].filter(r=>r!=="");
     shareText(`Cambio turno ${dataStr}`,rows.join("\n"));
   }
 
@@ -716,7 +808,7 @@ function ANMOperator() {
     }
     if(!lista.length){fire("Nessun guasto nel periodo");return;}
     const righe=lista.map(g=>`📅 ${g.d}/${g.month+1} (${g.dow})\n🚍 Vettura ${g.vettura}\n⚠️ ${g.guasto}`);
-    shareText("Guasti",["⚠️ REGISTRO GUASTI\n",...righe,"\n📱 ANM Operator"].join("\n\n"));
+    shareText("Guasti",["⚠️ REGISTRO GUASTI\n",...righe,"\n📱 Operatore"].join("\n\n"));
   }
 
   function parseGuasti(note){
@@ -769,7 +861,7 @@ function ANMOperator() {
     const vettureConGuasto=vetture.filter(v=>guasti[v]);
     if(!vettureConGuasto.length){fire("Nessun guasto da condividere");return;}
     const righe=vetture.map(v=>{const g=guasti[v];return g?`🚍 Vettura ${v}\n   ⚠️ ${g}`:`🚍 Vettura ${v}\n   ✅ OK`;});
-    const text=["⚠️ SEGNALAZIONE GUASTO",`📅 ${dd.d} ${MONTHS[mo]} ${yr}`,dd.shift?.linea?`🚌 Linea: ${dd.shift.linea}`:"",saeCodes.length?"🔖 SAE: "+saeCodes.join(", "):"","---",...righe,"📱 ANM Operator Telegram"].filter(r=>r!=="").join("\n");
+    const text=["⚠️ SEGNALAZIONE GUASTO",`📅 ${dd.d} ${MONTHS[mo]} ${yr}`,dd.shift?.linea?`🚌 Linea: ${dd.shift.linea}`:"",saeCodes.length?"🔖 SAE: "+saeCodes.join(", "):"","---",...righe,"📱 Operatore"].filter(r=>r!=="").join("\n");
     shareText("Guasto",text);
   }
 
@@ -853,53 +945,35 @@ function ANMOperator() {
   function parseDinoBot(){
     const txt = dinoText.trim();
     if(!txt){ fire("Incolla il messaggio del bot!"); return; }
-
-    // Estrai nome e data: "CIRO, per il giorno 13/03/2026 è previsto:"
     const headerMatch = txt.match(/([A-ZÀÈÌÒÙ]+),\s*per il giorno\s*(\d{2})\/(\d{2})\/(\d{4})/i);
     if(!headerMatch){ fire("Formato non riconosciuto — copia tutto il messaggio"); return; }
     const nome = headerMatch[1];
     const day = parseInt(headerMatch[2]);
     const month = parseInt(headerMatch[3]) - 1;
     const year = parseInt(headerMatch[4]);
-
-    // Estrai numero turno: "Turno 147-1"
     const turnoMatch = txt.match(/Turno\s+([\d\-]+[A-Z]*)/i);
     const turno = turnoMatch ? turnoMatch[1] : "";
-
-    // Estrai tutti i "monto ... alle HH:MM" e "smonto ... alle HH:MM"
     const montoRe = /monto\s+[^a]+alle\s+(\d{2}:\d{2})/gi;
     const smontoRe = /smonto\s+[^a]+alle\s+(\d{2}:\d{2})/gi;
     const monti=[], smonti=[];
     let m;
     while((m=montoRe.exec(txt))!==null) monti.push(m[1]);
     while((m=smontoRe.exec(txt))!==null) smonti.push(m[1]);
-
-    // Prima presentazione = primo monto, ultimo smonto
     const start = monti[0] || "";
     const end = smonti[smonti.length-1] || "";
-
-    // Estrai deposito dal primo monto
     const depMatch = txt.match(/monto\s+([A-Z][^a]+?)\s+alle\s+\d/i);
     const deposito = depMatch ? depMatch[1].trim() : "";
-
-    // Estrai linea dal nastro (prima colonna = numero uscita/linea es. 18845)
-    // Riga nastro: "18845 11:05(SUALE1) - 18:00(SUALE1)"
     const nastroPart = txt.split("nastro")[1] || "";
     const nastroCodes = [...new Set((nastroPart.match(/^(\d{4,6})\s/gm)||[]).map(x=>x.trim()))];
     const linea = turno || nastroCodes[0] || "";
-
-    // Conta pezzi
     const pezziMatch = txt.match(/Pezzo\s+\d/gi);
     const pezzi = pezziMatch ? pezziMatch.length : 1;
-
-    // Determina icona e colore in base all'orario di inizio
     let icon="🌅", color="#F59E0B";
     if(start){
       const [h]=start.split(":").map(Number);
       if(h>=14&&h<22){icon="☀️";color="#3B82F6";}
       else if(h>=22||h<5){icon="🌙";color="#8B5CF6";}
     }
-
     const preview = {nome,day,month,year,turno,start,end,deposito,linea,pezzi,icon,color,nastroCodes};
     setDinoPreview(preview);
     fire(`✓ Trovato turno ${turno} del ${day}/${month+1}/${year}`);
@@ -929,12 +1003,6 @@ function ANMOperator() {
     fire("✓ Turno "+turno+" importato nel calendario!");
     setDinoText(""); setDinoPreview(null); setDinoOpen(false);
     setYr(year); setMo(month); setTab("cal");
-  }
-
-  function parseDinoTime(str){
-    // Estrai HH:MM da stringhe come "04:55(CVAO)"
-    const m = str.match(/(\d{2}:\d{2})/);
-    return m ? m[1] : str;
   }
 
   function parseGuastiImport(){
@@ -982,14 +1050,16 @@ function ANMOperator() {
   return (
     <>
       <style>{G}</style>
-      <div className="app">
+      <div className={`app${darkMode?"":" light"}`}>
 
         {/* HEADER */}
         <div className="hdr">
           <div className="hdr-inner">
             <div className="logo">
-              <div className="logo-mark">⏱</div>
-              <span className="logo-txt">ANM Operator Telegram</span>
+              <div className="logo-mark">
+                <ANMLogo size={36} />
+              </div>
+              <span className="logo-txt">Operatore</span>
             </div>
             <div className="mnav">
               <button className="mnav-btn" onClick={()=>chMonth(-1)}>‹</button>
@@ -1001,7 +1071,7 @@ function ANMOperator() {
             </div>
           </div>
           <div className="modebar">
-            {[["cal","📅","Calendario"],["rot","🔄","Rotazione"],["stats","📊","Report"],["shifts","🎨","Turni"],["import","📥","Importa"],["esporta","📤","Esporta"],["guide","❓","Guida"]].map(([id,ic,lb])=>(
+            {[["cal","📅","Calendario"],["rot","🔄","Rotazione"],["stats","📊","Report"],["shifts","🎨","Turni"],["colleghi","👥","Colleghi"],["stipendio","💶","Stipendio"],["import","📥","Importa"],["esporta","📤","Esporta"],["settings","⚙️","Impost."],["guide","❓","Guida"]].map(([id,ic,lb])=>(
               <button key={id} className={`mode-btn${tab===id?" active":""}`} onClick={()=>{setTab(id);resetRange();}}>{ic} {lb}</button>
             ))}
           </div>
@@ -1012,7 +1082,6 @@ function ANMOperator() {
 
           {/* CALENDARIO */}
           {tab==="cal"&&<>
-            {/* Banner installazione */}
             {showInstall&&!isInstalled&&<div className="install-banner">
               <div className="install-banner-icon">📲</div>
               <div className="install-banner-text">
@@ -1033,7 +1102,8 @@ function ANMOperator() {
                   <div key={d} className={dc}
                     style={{background:hasRange?"rgba(255,107,53,.25)":shift?shift.color+"35":"rgba(255,255,255,.025)",borderColor:hasRange?"#FF6B35":shift?shift.color+"99":"rgba(255,255,255,.06)",borderWidth:shift&&!hasRange?"1.5px":"1px"}}
                     onClick={()=>tapDay(d)} onMouseEnter={()=>rangeA&&!rangeB&&setHoverD(d)}>
-                    <span className={`day-num${isToday?" today":""}`}>{d}</span>
+                    <span className={`day-num${isToday?" today":""}${((fdow(yr,mo)+d-1)%7)===6?" sun":""}`} style={((fdow(yr,mo)+d-1)%7)===6&&!isToday?{color:"#EC4899",fontWeight:800}:{}}>{d}</span>
+                    {festivita[key]&&<span style={{fontSize:7,color:"#EC4899",fontWeight:800,textAlign:"center",display:"block",padding:"0 2px",overflow:"hidden",whiteSpace:"nowrap",textOverflow:"ellipsis",width:"100%"}}>{festivita[key]}</span>}
                     {shift&&<div className="day-filled">
                       <div style={{width:34,height:34,borderRadius:"50%",background:shift.color,display:"flex",alignItems:"center",justifyContent:"center",fontSize:18,boxShadow:`0 2px 8px ${shift.color}66`}}>{shift.icon}</div>
                       <span style={{fontSize:9,fontWeight:900,color:shift.color,textAlign:"center",width:"100%",overflow:"hidden",whiteSpace:"nowrap",textOverflow:"ellipsis",letterSpacing:".4px",textTransform:"uppercase",padding:"0 2px"}}>{shift.linea||shift.label}</span>
@@ -1144,6 +1214,7 @@ function ANMOperator() {
               <button className="import-confirm" onClick={confirmImport}>✓ Importa {importData.length} turni nel calendario</button>
               <button className="import-cancel" onClick={()=>setImportData(null)}>Annulla</button>
             </>}
+
             {/* DINO BOT IMPORT */}
             <div style={{marginTop:24,borderTop:"1px solid rgba(255,255,255,.06)",paddingTop:20}}>
               <div style={{fontSize:11,fontWeight:700,color:"#555",textTransform:"uppercase",letterSpacing:".6px",marginBottom:14}}>📲 Da @DinoAnm_bot</div>
@@ -1165,16 +1236,15 @@ function ANMOperator() {
                 </button>
 
                 {dinoOpen&&<>
-                  {/* ACCESSO RAPIDO DINO BOT */}
                   <div style={{background:"rgba(0,0,0,.25)",border:"1px solid rgba(99,102,241,.2)",borderRadius:12,padding:12,marginBottom:4}}>
                     <div style={{fontSize:10,fontWeight:800,color:"#6366F1",textTransform:"uppercase",letterSpacing:".8px",marginBottom:10}}>⚡ Accesso rapido</div>
                     <div style={{display:"flex",gap:8,marginBottom:10}}>
-                      <a href="https://t.me/DinoAnm_bot?start=turno_oggi" target="_blank" rel="noopener noreferrer"
+                      <a href="https://t.me/DinoAnm_bot" target="_blank" rel="noopener noreferrer"
                         style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:6,padding:"12px 8px",background:"linear-gradient(135deg,rgba(99,102,241,.25),rgba(139,92,246,.15))",border:"1px solid rgba(99,102,241,.4)",borderRadius:11,textDecoration:"none",cursor:"pointer"}}>
                         <span style={{fontSize:24}}>📅</span>
                         <span style={{fontSize:11,fontWeight:800,color:"#A5B4FC",textAlign:"center",lineHeight:1.3}}>Turno<br/>di oggi</span>
                       </a>
-                      <a href="https://t.me/DinoAnm_bot?start=turno_domani" target="_blank" rel="noopener noreferrer"
+                      <a href="https://t.me/DinoAnm_bot" target="_blank" rel="noopener noreferrer"
                         style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",gap:6,padding:"12px 8px",background:"linear-gradient(135deg,rgba(99,102,241,.25),rgba(139,92,246,.15))",border:"1px solid rgba(99,102,241,.4)",borderRadius:11,textDecoration:"none",cursor:"pointer"}}>
                         <span style={{fontSize:24}}>🔮</span>
                         <span style={{fontSize:11,fontWeight:800,color:"#A5B4FC",textAlign:"center",lineHeight:1.3}}>Turno<br/>di domani</span>
@@ -1186,8 +1256,8 @@ function ANMOperator() {
                       </a>
                     </div>
                     <div style={{fontSize:11,color:"#444",lineHeight:1.6}}>
-                      1. Tocca un tasto qui sopra → si apre Telegram<br/>
-                      2. Scrivi <strong style={{color:"#A5B4FC",fontFamily:"monospace"}}>Turno di oggi</strong> o <strong style={{color:"#A5B4FC",fontFamily:"monospace"}}>Turno di domani</strong><br/>
+                      1. Tocca un tasto qui sopra → si apre Telegram con Dino Bot<br/>
+                      2. Invia il messaggio <strong style={{color:"#A5B4FC",fontFamily:"monospace"}}>Turno di oggi</strong> o <strong style={{color:"#A5B4FC",fontFamily:"monospace"}}>Turno di domani</strong><br/>
                       3. Copia la risposta e incollala qui sotto ↓
                     </div>
                   </div>
@@ -1315,13 +1385,21 @@ function ANMOperator() {
             </div>
           </div>}
 
+          {/* COLLEGHI */}
+          {tab==="colleghi"&&<ColleghiTab st={st} updateSt={updateSt} fire={fire} cambioGiorno={cambioGiorno} setCambioGiorno={setCambioGiorno} allShifts={allShifts}/>}
+          {/* STIPENDIO */}
+          {tab==="stipendio"&&<StipendioCalc st={st} yr={yr} mo={mo} allShifts={allShifts}/>}
+          {/* IMPOSTAZIONI */}
+          {tab==="settings"&&<SettingsTab utente={utente} fire={fire} onLogout={onLogout} backupRef={backupRef} esportaBackup={esportaBackup} importaBackup={importaBackup} darkMode={darkMode} toggleTheme={toggleTheme}/>}
           {/* GUIDA */}
           {tab==="guide"&&<div className="slide-up">
             <div className="ph">❓ Guida rapida</div>
             <div style={{padding:"0 0 24px",color:"#aaa",fontSize:14,lineHeight:1.8}}>
               <div style={{background:"linear-gradient(135deg,rgba(255,107,53,.1),rgba(255,60,172,.07))",border:"1px solid rgba(255,107,53,.2)",borderRadius:14,padding:16,marginBottom:20,textAlign:"center"}}>
-                <div style={{fontSize:36,marginBottom:8}}>🌋</div>
-                <div style={{fontWeight:800,fontSize:15,color:"#E2E2F0",marginBottom:4}}>ANM Operator Telegram</div>
+                <div style={{display:"flex",justifyContent:"center",marginBottom:8}}>
+                  <ANMLogo size={28} />
+                </div>
+                <div style={{fontWeight:800,fontSize:15,color:"#E2E2F0",marginBottom:4}}>Operatore</div>
                 <div style={{fontSize:12,color:"#555"}}>Gestione turni · Napoli · v1.0</div>
               </div>
               <p><strong style={{color:"#FF6B35"}}>📅 Calendario</strong> — Tocca un giorno per il dettaglio. Toccane due per assegnare un range di turni.</p><br/>
@@ -1337,7 +1415,7 @@ function ANMOperator() {
                   <strong style={{color:"#888"}}>iPhone:</strong> Tasto Condividi → "Aggiungi alla schermata Home"
                 </div>
               </div>
-              <p style={{color:"#333",fontSize:11,textAlign:"center",marginTop:20}}>ANM Operator · Fatto con ❤️ per gli operatori ANM Napoli</p>
+              <p style={{color:"#333",fontSize:11,textAlign:"center",marginTop:20}}>Operatore · Fatto con ❤️ per gli operatori ANM Napoli</p>
             </div>
           </div>}
 
@@ -1420,7 +1498,7 @@ function ANMOperator() {
 
         {/* BOTTOM NAV */}
         <div className={`bnav${(stripOpen||dayDetail)?" hidden":""}`}>
-          {[["cal","📅","Calendario"],["rot","🔄","Rotazione"],["stats","📊","Report"],["shifts","🎨","Turni"],["import","📥","Importa"],["esporta","📤","Esporta"],["guide","❓","Guida"]].map(([id,ic,lb])=>(
+          {[["cal","📅","Calendario"],["rot","🔄","Rotazione"],["stats","📊","Report"],["shifts","🎨","Turni"],["colleghi","👥","Colleghi"],["stipendio","💶","Stipendio"],["import","📥","Importa"],["esporta","📤","Esporta"],["settings","⚙️","Impost."],["guide","❓","Guida"]].map(([id,ic,lb])=>(
             <div key={id} className={`bni${tab===id?" on":""}`} onClick={()=>{setTab(id);resetRange();}}>
               <span className="bni-ic">{ic}</span>
               <span className="bni-lbl">{lb}</span>
@@ -1453,8 +1531,519 @@ function ANMOperator() {
   );
 }
 
+
+// ─── PIN SCREEN ──────────────────────────────────────────────────────────────
+function PinScreen({onUnlock}){
+  const [v,setV]=useState(""); const [err,setErr]=useState(false);
+  const pin=()=>{try{return localStorage.getItem("anm_pin")||"";}catch(e){return "";}};
+  function tap(n){
+    if(v.length>=4)return;
+    const nx=v+n; setV(nx);
+    if(nx.length===4) setTimeout(()=>{if(nx===pin()){onUnlock();}else{setErr(true);setV("");setTimeout(()=>setErr(false),600);}},150);
+  }
+  return (
+    <div className="pin-screen">
+      <div style={{fontSize:42}}>🔒</div>
+      <div style={{fontSize:15,fontWeight:700,color:"#E2E2F0"}}>Inserisci PIN</div>
+      <div className="pin-dots">{[0,1,2,3].map(i=><div key={i} className={`pin-dot${i<v.length?" on":""}`} style={err?{borderColor:"#EF4444",background:i<v.length?"#EF4444":"transparent"}:{}}/>)}</div>
+      {err&&<div style={{fontSize:12,color:"#EF4444",fontWeight:700}}>PIN errato</div>}
+      <div className="pin-pad">
+        {[1,2,3,4,5,6,7,8,9,"",0,"⌫"].map((k,i)=>(
+          k===""?<div key={i}/>:k==="⌫"?<button key={i} className="pin-btn" style={{background:"none",border:"none",fontSize:20}} onClick={()=>setV(p=>p.slice(0,-1))}>{k}</button>:
+          <button key={i} className="pin-btn" onClick={()=>tap(String(k))}>{k}</button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ─── SROW (riga impostazioni) ────────────────────────────────────────────────
+function SRow({ic,title,sub,right,onClick,color,danger}){
+  return (
+    <div className="srow" onClick={onClick} style={danger?{background:"rgba(239,68,68,.06)",borderColor:"rgba(239,68,68,.18)"}:{}}>
+      <span className="srow-ic">{ic}</span>
+      <div className="srow-body">
+        <div className="srow-title" style={danger?{color:"#EF4444"}:color?{color}:{}}>{title}</div>
+        {sub&&<div className="srow-sub">{sub}</div>}
+      </div>
+      <span className="srow-right">{right||"›"}</span>
+    </div>
+  );
+}
+
+// ─── CAMBIO PASSWORD ─────────────────────────────────────────────────────────
+function ChangePwd({utente,fire}){
+  const [open,setOpen]=useState(false);
+  const [o,setO]=useState(""); const [n1,setN1]=useState(""); const [n2,setN2]=useState("");
+  const [err,setErr]=useState(""); const [ok,setOk]=useState(false);
+  async function save(){
+    if(!o||!n1||!n2){setErr("Compila tutti i campi");return;}
+    if(n1!==n2){setErr("Password non coincidono");return;}
+    if(n1.length<4){setErr("Minimo 4 caratteri");return;}
+    const accs=getAccounts(),acc=accs[utente];
+    if(!acc){setErr("Account non trovato");return;}
+    if(await sha256(o)!==acc.pwdHash){setErr("Vecchia password errata");return;}
+    accs[utente]={...acc,pwdHash:await sha256(n1)};setAccounts(accs);
+    try{const s=localStorage.getItem("anm_remember");if(s){const r=JSON.parse(s);r.pwd=n1;localStorage.setItem("anm_remember",JSON.stringify(r));}}catch(e){}
+    setOk(true);setErr("");setO("");setN1("");setN2("");fire("✓ Password aggiornata!");
+    setTimeout(()=>{setOk(false);setOpen(false);},2000);
+  }
+  return (<div>
+    <SRow ic="🔑" title="Cambia password" sub="Modifica la password di accesso" right={open?"∨":"›"} onClick={()=>{setOpen(p=>!p);setErr("");}}/>
+    {open&&<div style={{background:"rgba(255,255,255,.03)",border:"1px solid rgba(255,255,255,.07)",borderRadius:12,padding:"14px 16px",marginBottom:8,display:"flex",flexDirection:"column",gap:10}}>
+      {[["Vecchia",o,setO],["Nuova",n1,setN1],["Conferma",n2,setN2]].map(([lbl,val,setter])=>(
+        <div key={lbl}>
+          <div style={{fontSize:9,color:"#555",fontWeight:700,textTransform:"uppercase",marginBottom:4}}>{lbl} password</div>
+          <input type="password" value={val} onChange={e=>{setter(e.target.value);setErr("");}} style={{width:"100%",background:"rgba(255,255,255,.06)",border:"1px solid rgba(255,255,255,.1)",borderRadius:9,padding:"10px 12px",color:"#E2E2F0",fontFamily:"'Syne',sans-serif",fontSize:14,outline:"none",boxSizing:"border-box"}}/>
+        </div>
+      ))}
+      {err&&<div style={{fontSize:12,color:"#EF4444",fontWeight:600}}>{err}</div>}
+      {ok&&<div style={{fontSize:12,color:"#10B981",fontWeight:600}}>✅ Aggiornata!</div>}
+      <button onClick={save} style={{background:"linear-gradient(135deg,#FF6B35,#FF3CAC)",border:"none",color:"white",padding:"12px",borderRadius:10,cursor:"pointer",fontFamily:"'Syne',sans-serif",fontWeight:800,fontSize:13}}>Salva</button>
+    </div>}
+  </div>);
+}
+
+// ─── SETTINGS TAB ────────────────────────────────────────────────────────────
+function SettingsTab({utente,fire,onLogout,backupRef,esportaBackup,importaBackup,darkMode,toggleTheme}){
+  const acc=(getAccounts()[utente]||{});
+  const nT=Object.keys(getUserData(utente).shifts||{}).length;
+  const [notif,setNotif]=useState(()=>{try{return typeof Notification!=="undefined"?Notification.permission:"denied";}catch(e){return "denied";}});
+  const [pin,setPin]=useState(()=>{try{return localStorage.getItem("anm_pin")||"";}catch(e){return "";}});
+  const [newP,setNewP]=useState(""); const [pinMsg,setPinMsg]=useState("");
+  const [showAdmin,setShowAdmin]=useState(false);
+  async function attivaNotif(){if(!("Notification"in window)){fire("Non supportate");return;}const p=await Notification.requestPermission();setNotif(p);fire(p==="granted"?"✓ Notifiche attivate!":"Non autorizzate");}
+  function testNotif(){if(Notification.permission!=="granted"){fire("Prima attiva notifiche");return;}new Notification("🚌 Test ANM",{body:"Funziona!"});}
+  function salvaPin(){if(newP.length!==4||!/^\d{4}$/.test(newP)){setPinMsg("PIN di 4 cifre");return;}try{localStorage.setItem("anm_pin",newP);}catch(e){}setPin(newP);setNewP("");setPinMsg("✅ PIN impostato!");setTimeout(()=>setPinMsg(""),3000);}
+  function rimuoviPin(){try{localStorage.removeItem("anm_pin");}catch(e){}setPin("");setPinMsg("PIN rimosso");}
+  // Admin state
+  const [avviso,setAvviso]=useState(()=>{try{return localStorage.getItem("anm_avviso")||"";}catch(e){return "";}});
+  const [accs,setAccs]=useState({});
+  const [migF,setMigF]=useState(utente); const [migT,setMigT]=useState(""); const [admMsg,setAdmMsg]=useState("");
+  useEffect(()=>{if(showAdmin)setAccs(getAccounts());},[showAdmin]);
+  function salvaAvviso(){try{if(avviso.trim())localStorage.setItem("anm_avviso",avviso.trim());else localStorage.removeItem("anm_avviso");}catch(e){}fire("✓ Avviso "+(avviso.trim()?"pubblicato":"rimosso"));}
+  function resetPwd(mat){sha256(mat).then(h=>{const a=getAccounts();a[mat]={...a[mat],pwdHash:h};setAccounts(a);setAccs({...a});fire("✓ Password di "+mat+" → uguale alla matricola");});}
+  function delUser(mat){if(!window.confirm("Eliminare "+mat+"?"))return;const a=getAccounts();delete a[mat];try{localStorage.removeItem("anm_data_"+mat);}catch(e){}setAccounts(a);setAccs({...a});fire("✓ Eliminato");}
+  function migrate(){if(!migF.trim()||!migT.trim()){setAdmMsg("❌ Inserisci entrambe le matricole");return;}const from=migF.trim(),to=migT.trim();const a=getAccounts();if(!a[from]){setAdmMsg("❌ "+from+" non trovata");return;}if(a[to]){setAdmMsg("❌ "+to+" già registrata");return;}a[to]={...a[from]};delete a[from];try{const d=localStorage.getItem("anm_data_"+from);if(d)localStorage.setItem("anm_data_"+to,d);localStorage.removeItem("anm_data_"+from);}catch(e){}setAccounts(a);setAccs({...a});setAdmMsg("✅ Migrato "+from+" → "+to);setTimeout(()=>setAdmMsg(""),6000);}
+  const logs=useMemo(()=>{try{return JSON.parse(localStorage.getItem("anm_log")||"[]").slice(-20).reverse();}catch(e){return [];}});
+  const CLR=["#6366F1","#EC4899","#F59E0B","#10B981","#3B82F6","#8B5CF6","#EF4444","#14B8A6"];
+  const ini=n=>n.trim().split(" ").map(w=>w[0]||"").join("").substring(0,2).toUpperCase();
+
+  return (<div className="slide-up" style={{paddingBottom:30}}>
+    <div className="ph">⚙️ Impostazioni</div>
+    {/* Profilo */}
+    <div style={{background:"linear-gradient(135deg,rgba(255,107,53,.12),rgba(255,60,172,.08))",border:"1px solid rgba(255,107,53,.25)",borderRadius:16,padding:"18px 20px",marginBottom:18,display:"flex",alignItems:"center",gap:16}}>
+      <div style={{width:54,height:54,borderRadius:"50%",background:"linear-gradient(135deg,#FF6B35,#FF3CAC)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:22,fontWeight:800,color:"white",flexShrink:0}}>{(acc.nome||utente).substring(0,1).toUpperCase()}</div>
+      <div style={{flex:1}}>
+        <div style={{fontSize:16,fontWeight:800,color:"#E2E2F0"}}>{acc.nome||"Operatore"}</div>
+        <div style={{display:"flex",gap:6,marginTop:3,flexWrap:"wrap",alignItems:"center"}}>
+          <span style={{fontSize:12,color:"#666",fontFamily:"'JetBrains Mono',monospace"}}>Matr. {utente}</span>
+          {getTipo(utente)&&<span style={{fontSize:9,fontWeight:800,background:getTipo(utente)==="ANM"?"rgba(59,130,246,.2)":"rgba(245,158,11,.2)",color:getTipo(utente)==="ANM"?"#3B82F6":"#F59E0B",border:"1px solid "+(getTipo(utente)==="ANM"?"rgba(59,130,246,.4)":"rgba(245,158,11,.4)"),borderRadius:4,padding:"1px 6px"}}>{getTipo(utente)}</span>}
+          {isAdmin(utente)&&<span style={{fontSize:9,fontWeight:800,background:"rgba(239,68,68,.2)",color:"#FCA5A5",border:"1px solid rgba(239,68,68,.3)",borderRadius:4,padding:"1px 6px"}}>👑 ADMIN</span>}
+        </div>
+        <div style={{fontSize:11,color:"#444",marginTop:3}}>{nT} turni salvati</div>
+      </div>
+    </div>
+    {/* Sezioni */}
+    <div style={{fontSize:10,fontWeight:700,color:"#444",textTransform:"uppercase",letterSpacing:".6px",marginBottom:8}}>🔐 Account</div>
+    <ChangePwd utente={utente} fire={fire}/>
+    {/* PIN */}
+    <SRow ic="🔒" title="Blocco PIN" sub={pin?"Attivo — blocco dopo 5 min":"Non attivo"} color={pin?"#10B981":undefined}/>
+    <div style={{background:"rgba(255,255,255,.03)",border:"1px solid rgba(255,255,255,.07)",borderRadius:12,padding:"12px 14px",marginBottom:8}}>
+      <div style={{display:"flex",gap:8,alignItems:"center"}}>
+        <input type="password" inputMode="numeric" maxLength={4} value={newP} onChange={e=>setNewP(e.target.value.replace(/\D/g,""))} placeholder="Nuovo PIN (4 cifre)" style={{flex:1,background:"rgba(255,255,255,.07)",border:"1px solid rgba(255,255,255,.12)",borderRadius:9,padding:"9px 12px",color:"#E2E2F0",fontFamily:"'JetBrains Mono',monospace",fontSize:18,fontWeight:700,letterSpacing:4,outline:"none",textAlign:"center"}}/>
+        <button onClick={salvaPin} style={{background:"rgba(16,185,129,.2)",border:"1px solid rgba(16,185,129,.4)",color:"#10B981",padding:"9px 14px",borderRadius:9,cursor:"pointer",fontFamily:"'Syne',sans-serif",fontWeight:800,fontSize:13}}>Imposta</button>
+        {pin&&<button onClick={rimuoviPin} style={{background:"rgba(239,68,68,.1)",border:"1px solid rgba(239,68,68,.25)",color:"#EF4444",padding:"9px 10px",borderRadius:9,cursor:"pointer",fontSize:12,fontWeight:700,fontFamily:"'Syne',sans-serif"}}>✕</button>}
+      </div>
+      {pinMsg&&<div style={{fontSize:12,fontWeight:600,color:pinMsg.startsWith("✅")?"#10B981":"#EF4444",marginTop:8}}>{pinMsg}</div>}
+    </div>
+    <div style={{fontSize:10,fontWeight:700,color:"#444",textTransform:"uppercase",letterSpacing:".6px",marginBottom:8,marginTop:14}}>🎨 Aspetto</div>
+    <SRow ic={darkMode?"🌙":"☀️"} title={"Tema "+(darkMode?"scuro":"chiaro")+" attivo"} sub="Tocca per cambiare"
+      right={<div style={{width:44,height:24,borderRadius:12,background:darkMode?"linear-gradient(135deg,#6366F1,#8B5CF6)":"rgba(0,0,0,.15)",position:"relative",cursor:"pointer",transition:"background .2s"}} onClick={toggleTheme}><div style={{position:"absolute",width:18,height:18,borderRadius:"50%",background:"white",top:3,left:darkMode?23:3,transition:"left .2s",boxShadow:"0 1px 4px rgba(0,0,0,.3)"}}/></div>}
+      onClick={toggleTheme}/>
+    <div style={{fontSize:10,fontWeight:700,color:"#444",textTransform:"uppercase",letterSpacing:".6px",marginBottom:8,marginTop:14}}>🔔 Notifiche</div>
+    <SRow ic="🔔" title="Notifiche push" sub={notif==="granted"?"Attive — reminder turno alle 21:00":"Non attive"} color={notif==="granted"?"#10B981":undefined}
+      right={notif==="granted"?<button onClick={testNotif} style={{background:"rgba(16,185,129,.15)",border:"1px solid rgba(16,185,129,.35)",color:"#10B981",padding:"5px 10px",borderRadius:18,cursor:"pointer",fontSize:11,fontWeight:700,fontFamily:"'Syne',sans-serif"}}>🧪 Test</button>
+        :<button onClick={attivaNotif} style={{background:"rgba(255,107,53,.15)",border:"1px solid rgba(255,107,53,.35)",color:"#FF6B35",padding:"5px 10px",borderRadius:18,cursor:"pointer",fontSize:11,fontWeight:700,fontFamily:"'Syne',sans-serif"}}>Attiva</button>}/>
+    <div style={{fontSize:10,fontWeight:700,color:"#444",textTransform:"uppercase",letterSpacing:".6px",marginBottom:8,marginTop:14}}>💾 Backup</div>
+    <input ref={backupRef} type="file" accept=".json" style={{display:"none"}} onChange={importaBackup}/>
+    <SRow ic="📦" title="Esporta backup" sub="Salva turni — Drive · Telegram · File" color="#10B981" onClick={esportaBackup}/>
+    <SRow ic="♻️" title="Ripristina backup" sub="Carica file .json salvato" color="#6EE7B7" onClick={()=>backupRef.current?.click()}/>
+    {/* ADMIN */}
+    {isAdmin(utente)&&<>
+      <div style={{fontSize:10,fontWeight:700,color:"#EF4444",textTransform:"uppercase",letterSpacing:".6px",marginBottom:8,marginTop:14}}>👑 Pannello Admin</div>
+      <SRow ic="👑" title="Gestione sistema" sub={Object.keys(accs).length+" account registrati"} danger right={showAdmin?"∨":"›"} onClick={()=>setShowAdmin(p=>!p)}/>
+      {showAdmin&&<div style={{background:"rgba(239,68,68,.04)",border:"1px solid rgba(239,68,68,.15)",borderRadius:12,padding:"14px 16px",marginBottom:8,display:"flex",flexDirection:"column",gap:12}}>
+        {/* AVVISO */}
+        <div>
+          <div style={{fontSize:10,color:"#FCA5A5",fontWeight:700,textTransform:"uppercase",marginBottom:6}}>📢 Avviso per tutti</div>
+          <textarea value={avviso} onChange={e=>setAvviso(e.target.value)} placeholder="Scrivi un messaggio per tutti i colleghi…" rows={2} style={{width:"100%",background:"rgba(0,0,0,.2)",border:"1px solid rgba(255,107,53,.25)",borderRadius:8,padding:"9px 11px",color:"#E2E2F0",fontFamily:"'Syne',sans-serif",fontSize:13,outline:"none",resize:"none",boxSizing:"border-box"}}/>
+          <div style={{display:"flex",gap:8,marginTop:6}}>
+            <button onClick={salvaAvviso} style={{flex:1,background:"rgba(255,107,53,.2)",border:"1px solid rgba(255,107,53,.4)",color:"#FF6B35",padding:"8px",borderRadius:8,cursor:"pointer",fontFamily:"'Syne',sans-serif",fontWeight:800,fontSize:12}}>📢 Pubblica</button>
+            {avviso&&<button onClick={()=>{setAvviso("");salvaAvviso();}} style={{background:"rgba(239,68,68,.1)",border:"1px solid rgba(239,68,68,.25)",color:"#EF4444",padding:"8px 12px",borderRadius:8,cursor:"pointer",fontSize:11,fontWeight:700,fontFamily:"'Syne',sans-serif"}}>Rimuovi</button>}
+          </div>
+        </div>
+        {/* MIGRAZIONE */}
+        <div>
+          <div style={{fontSize:10,color:"#FCA5A5",fontWeight:700,textTransform:"uppercase",marginBottom:6}}>🔄 Migrazione matricola</div>
+          <div style={{display:"flex",gap:8,alignItems:"center",marginBottom:6}}>
+            <input value={migF} onChange={e=>setMigF(e.target.value)} placeholder="Da" style={{flex:1,background:"rgba(255,255,255,.06)",border:"1px solid rgba(255,255,255,.1)",borderRadius:8,padding:"7px 10px",color:"#E2E2F0",fontFamily:"'JetBrains Mono',monospace",fontSize:12,fontWeight:700,outline:"none"}}/>
+            <span style={{color:"#555"}}>→</span>
+            <input value={migT} onChange={e=>setMigT(e.target.value)} placeholder="A" style={{flex:1,background:"rgba(255,255,255,.06)",border:"1px solid rgba(255,255,255,.1)",borderRadius:8,padding:"7px 10px",color:"#E2E2F0",fontFamily:"'JetBrains Mono',monospace",fontSize:12,fontWeight:700,outline:"none"}}/>
+          </div>
+          <button onClick={migrate} style={{width:"100%",background:"rgba(255,107,53,.15)",border:"1px solid rgba(255,107,53,.35)",color:"#FF6B35",padding:"9px",borderRadius:8,cursor:"pointer",fontFamily:"'Syne',sans-serif",fontWeight:800,fontSize:12}}>🔄 Migra</button>
+          {admMsg&&<div style={{fontSize:12,fontWeight:700,color:admMsg.startsWith("✅")?"#10B981":"#EF4444",marginTop:6}}>{admMsg}</div>}
+        </div>
+        {/* UTENTI */}
+        <div>
+          <div style={{fontSize:10,color:"#FCA5A5",fontWeight:700,textTransform:"uppercase",marginBottom:6}}>👥 Utenti ({Object.keys(accs).length})</div>
+          <div style={{maxHeight:200,overflowY:"auto",borderRadius:8,border:"1px solid rgba(255,255,255,.06)"}}>
+            {Object.entries(accs).map(([mat,a],i)=>(
+              <div key={mat} style={{display:"flex",alignItems:"center",gap:8,padding:"8px 10px",borderBottom:"1px solid rgba(255,255,255,.04)"}}>
+                <div style={{width:28,height:28,borderRadius:"50%",background:CLR[i%CLR.length],display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,fontWeight:800,color:"white",flexShrink:0}}>{ini(a.nome||mat)}</div>
+                <div style={{flex:1}}>
+                  <div style={{fontSize:11,fontWeight:700,color:mat===utente?"#FF6B35":"#E2E2F0"}}>{a.nome||"—"}{mat===utente&&<span style={{fontSize:8,color:"#FF6B35",marginLeft:4}}>TU</span>}</div>
+                  <div style={{fontSize:9,color:"#555",fontFamily:"'JetBrains Mono',monospace"}}>{mat} {getTipo(mat)&&<span style={{color:getTipo(mat)==="ANM"?"#3B82F6":"#F59E0B"}}>·{getTipo(mat)}</span>}</div>
+                </div>
+                {mat!==utente&&<div style={{display:"flex",gap:4}}>
+                  <button onClick={()=>resetPwd(mat)} style={{background:"rgba(255,107,53,.12)",border:"none",color:"#FF6B35",padding:"3px 7px",borderRadius:5,cursor:"pointer",fontSize:10,fontWeight:700}}>🔑</button>
+                  <button onClick={()=>delUser(mat)} style={{background:"rgba(239,68,68,.1)",border:"none",color:"#EF4444",padding:"3px 7px",borderRadius:5,cursor:"pointer",fontSize:10,fontWeight:700}}>✕</button>
+                </div>}
+              </div>
+            ))}
+          </div>
+        </div>
+        {/* STORICO */}
+        {logs.length>0&&<div>
+          <div style={{fontSize:10,color:"#FCA5A5",fontWeight:700,textTransform:"uppercase",marginBottom:6}}>📋 Ultimi accessi</div>
+          <div style={{maxHeight:150,overflowY:"auto",borderRadius:8,border:"1px solid rgba(255,255,255,.06)"}}>
+            {logs.map((l,i)=>(
+              <div key={i} style={{display:"flex",justifyContent:"space-between",padding:"6px 10px",borderBottom:"1px solid rgba(255,255,255,.04)",fontSize:10}}>
+                <span style={{fontFamily:"'JetBrains Mono',monospace",color:"#FF6B35",fontWeight:700}}>{l.mat}</span>
+                <span style={{color:"#444"}}>{new Date(l.ts).toLocaleString("it-IT",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"})}</span>
+              </div>
+            ))}
+          </div>
+        </div>}
+      </div>}
+    </>}
+    <div style={{fontSize:10,fontWeight:700,color:"#444",textTransform:"uppercase",letterSpacing:".6px",marginBottom:8,marginTop:14}}>ℹ️ Info</div>
+    <SRow ic="📱" title="Operatore ANM Napoli" sub="v2.0 · Gestione turni" right={<span style={{fontSize:10,color:"#333",fontFamily:"'JetBrains Mono',monospace"}}>v2.0</span>}/>
+    <button onClick={()=>{try{localStorage.removeItem("anm_remember");}catch(e){}onLogout();}} style={{width:"100%",background:"rgba(239,68,68,.08)",border:"1px solid rgba(239,68,68,.25)",color:"#EF4444",padding:"15px",borderRadius:12,cursor:"pointer",fontFamily:"'Syne',sans-serif",fontWeight:800,fontSize:15,marginTop:16,display:"flex",alignItems:"center",justifyContent:"center",gap:8}}>
+      🚪 Esci dall'account
+    </button>
+    <div style={{fontSize:11,color:"#333",textAlign:"center",marginTop:12}}>Fatto con ❤️ per gli operatori ANM Napoli</div>
+  </div>);
+}
+
+// ─── COLLEGHI TAB ─────────────────────────────────────────────────────────────
+function ColleghiTab({st,updateSt,fire,cambioGiorno,setCambioGiorno,allShifts}){
+  const cl=st.colleghi||[];
+  const CLR=["#6366F1","#EC4899","#F59E0B","#10B981","#3B82F6","#8B5CF6","#EF4444","#14B8A6"];
+  const ini=n=>n.trim().split(" ").map(w=>w[0]||"").join("").substring(0,2).toUpperCase();
+  const [q,setQ]=useState(""); const [showD,setShowD]=useState(false); const [sel,setSel]=useState(null);
+  const [editId,setEditId]=useState(null); const [editMat,setEditMat]=useState("");
+  const sugg=q.trim().length>0?cl.filter(c=>c.nome.toLowerCase().includes(q.toLowerCase())||c.matricola.startsWith(q)).slice(0,8):[];
+  function pick(c){setSel(c);setQ(c.nome);setShowD(false);}
+  function clear(){setSel(null);setQ("");setShowD(false);}
+  function addC(n,m){if(!n.trim()||!m.trim()){fire("Nome e matricola");return;}updateSt(p=>({...p,colleghi:[...(p.colleghi||[]),{id:Date.now(),nome:n.trim(),matricola:m.trim().toUpperCase()}]}));fire("✓ Aggiunto!");}
+  function removeC(id){updateSt(p=>({...p,colleghi:(p.colleghi||[]).filter(c=>c.id!==id)}));}
+  function updMat(id,m){updateSt(p=>({...p,colleghi:(p.colleghi||[]).map(c=>c.id===id?{...c,matricola:m.trim()}:c)}));fire("✓ Matricola aggiornata");setEditId(null);}
+  function shareC(c){
+    const d=new Date(cambioGiorno);if(isNaN(d)){fire("Data non valida");return;}
+    const key=dk(d.getFullYear(),d.getMonth(),d.getDate()),data=st.shifts[key];
+    if(!data){fire("Nessun turno per questo giorno");return;}
+    const sh=allShifts.find(x=>x.id===data.shiftId);if(!sh)return;
+    const DI=["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
+    const MI=["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"];
+    const ds=`${DI[d.getDay()]} ${d.getDate()} ${MI[d.getMonth()]} ${d.getFullYear()}`;
+    const vets=(data.note||"").match(/Vettura:\s*([\w]+)/g)||[];
+    const txt=["🔄 CAMBIO TURNO",`👤 ${c.nome} — Matr. ${c.matricola}`,`📅 ${ds}`,`${sh.icon} ${sh.label}`,sh.start?`🕐 ${sh.start} – ${sh.end}`:"",sh.linea?`🚍 ${sh.linea}`:"",vets.length?`🚌 ${vets.map(v=>v.replace(/Vettura:\s*/,"")).join(", ")}`:"","📱 Operatore ANM"].filter(r=>r).join("\n");
+    if(navigator.share&&navigator.canShare({text:txt}))navigator.share({text:txt}).catch(()=>navigator.clipboard?.writeText(txt).then(()=>fire("✓ Copiato!")));
+    else navigator.clipboard?.writeText(txt).then(()=>fire("✓ Copiato negli appunti!"));
+  }
+  return (<div className="slide-up">
+    <div className="ph">👥 Colleghi</div>
+    <div className="ps">Rubrica e cambio turno rapido.</div>
+    <div style={{background:"rgba(255,255,255,.03)",border:"1px solid rgba(255,255,255,.07)",borderRadius:14,padding:"14px 16px",marginBottom:14}}>
+      <div style={{fontSize:10,fontWeight:700,color:"#444",textTransform:"uppercase",letterSpacing:".6px",marginBottom:10}}>🔄 Invia cambio turno</div>
+      <input type="date" value={cambioGiorno} onChange={e=>setCambioGiorno(e.target.value)} style={{width:"100%",background:"rgba(255,255,255,.07)",border:"1px solid rgba(255,255,255,.12)",borderRadius:9,padding:"10px 12px",color:"#E2E2F0",fontSize:14,fontFamily:"'JetBrains Mono',monospace",fontWeight:700,boxSizing:"border-box",outline:"none",marginBottom:10}}/>
+      <div style={{position:"relative"}}>
+        <div style={{display:"flex",alignItems:"center",gap:8,background:"rgba(255,255,255,.06)",border:"1px solid "+(sel?"rgba(99,102,241,.5)":"rgba(255,255,255,.12)"),borderRadius:11,padding:"10px 14px"}}>
+          {sel?<div style={{width:26,height:26,borderRadius:"50%",background:CLR[cl.findIndex(x=>x.id===sel.id)%CLR.length],display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,fontWeight:800,color:"white",flexShrink:0}}>{ini(sel.nome)}</div>:<span style={{fontSize:15,opacity:.4}}>👤</span>}
+          <input value={q} onChange={e=>{setQ(e.target.value);setSel(null);setShowD(true);}} onFocus={()=>{if(q.trim())setShowD(true);}} placeholder="Cerca collega…" style={{flex:1,background:"none",border:"none",outline:"none",color:"#E2E2F0",fontFamily:"'Syne',sans-serif",fontSize:14,fontWeight:sel?700:400}}/>
+          {q&&<button onClick={clear} style={{background:"none",border:"none",color:"#555",cursor:"pointer",fontSize:15,padding:0}}>✕</button>}
+        </div>
+        {showD&&sugg.length>0&&<div style={{position:"absolute",top:"calc(100% + 6px)",left:0,right:0,background:"#16162a",border:"1px solid rgba(99,102,241,.35)",borderRadius:12,zIndex:999,boxShadow:"0 8px 32px rgba(0,0,0,.6)",overflow:"hidden"}}>
+          {sugg.map((c,i)=>{const t=getTipo(c.matricola);const tc=t==="ANM"?"#3B82F6":t==="INT"?"#F59E0B":"#666";const idx=cl.findIndex(x=>x.id===c.id);
+            return <div key={c.id} onClick={()=>pick(c)} style={{display:"flex",alignItems:"center",gap:10,padding:"10px 14px",cursor:"pointer",borderBottom:i<sugg.length-1?"1px solid rgba(255,255,255,.05)":"none"}} onMouseEnter={e=>e.currentTarget.style.background="rgba(99,102,241,.12)"} onMouseLeave={e=>e.currentTarget.style.background="transparent"}>
+              <div style={{width:30,height:30,borderRadius:"50%",background:CLR[idx%CLR.length],display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,fontWeight:800,color:"white",flexShrink:0}}>{ini(c.nome)}</div>
+              <div style={{flex:1}}>
+                <div style={{fontSize:13,fontWeight:700,color:"#E2E2F0"}}>{c.nome}</div>
+                <div style={{display:"flex",gap:4,marginTop:1,alignItems:"center"}}>
+                  <span style={{fontSize:10,color:"#555",fontFamily:"'JetBrains Mono',monospace"}}>{c.matricola}</span>
+                  {t&&<span style={{fontSize:8,fontWeight:800,background:tc+"22",color:tc,border:"1px solid "+tc+"40",borderRadius:3,padding:"0 4px"}}>{t}</span>}
+                </div>
+              </div>
+            </div>;})}
+        </div>}
+      </div>
+      {sel&&<button onClick={()=>shareC(sel)} style={{width:"100%",marginTop:10,background:"linear-gradient(135deg,#FF6B35,#FF3CAC)",border:"none",color:"white",padding:"13px",borderRadius:12,cursor:"pointer",fontFamily:"'Syne',sans-serif",fontWeight:800,fontSize:14,display:"flex",alignItems:"center",justifyContent:"center",gap:8}}>
+        <span>📤</span><span>Invia a {sel.nome.split(" ")[0]}</span>
+      </button>}
+    </div>
+    <div style={{background:"rgba(255,255,255,.03)",border:"1px solid rgba(255,255,255,.07)",borderRadius:14,padding:"14px 16px"}}>
+      <div style={{fontSize:10,fontWeight:700,color:"#444",textTransform:"uppercase",letterSpacing:".6px",marginBottom:10}}>📋 Rubrica ({cl.length})</div>
+      <div style={{maxHeight:320,overflowY:"auto",borderRadius:10,border:"1px solid rgba(255,255,255,.06)"}}>
+        {cl.map((c,i)=>{const t=getTipo(c.matricola);const tc=t==="ANM"?"#3B82F6":t==="INT"?"#F59E0B":"#666";
+          return <div key={c.id} style={{display:"flex",alignItems:"center",gap:8,padding:"9px 12px",borderBottom:"1px solid rgba(255,255,255,.04)"}}>
+            <div style={{width:30,height:30,borderRadius:"50%",background:CLR[i%CLR.length],display:"flex",alignItems:"center",justifyContent:"center",fontSize:10,fontWeight:800,color:"white",flexShrink:0}}>{ini(c.nome)}</div>
+            <div style={{flex:1,minWidth:0}}>
+              <div style={{fontSize:12,fontWeight:700,color:"#E2E2F0",overflow:"hidden",textOverflow:"ellipsis",whiteSpace:"nowrap"}}>{c.nome}</div>
+              <div style={{display:"flex",alignItems:"center",gap:4,marginTop:1}}>
+                {editId===c.id?<><input value={editMat} onChange={e=>setEditMat(e.target.value)} style={{width:65,background:"rgba(255,255,255,.08)",border:"1px solid rgba(255,107,53,.4)",borderRadius:5,padding:"2px 6px",color:"#E2E2F0",fontFamily:"'JetBrains Mono',monospace",fontSize:11,fontWeight:700,outline:"none"}}/><button onClick={()=>updMat(c.id,editMat)} style={{background:"rgba(16,185,129,.2)",border:"1px solid rgba(16,185,129,.4)",color:"#10B981",padding:"2px 6px",borderRadius:5,cursor:"pointer",fontSize:10,fontWeight:700}}>✓</button><button onClick={()=>setEditId(null)} style={{background:"none",border:"none",color:"#555",cursor:"pointer",fontSize:11,padding:0}}>✕</button></>
+                :<><span style={{fontSize:10,color:"#555",fontFamily:"'JetBrains Mono',monospace"}}>{c.matricola}</span>{t&&<span style={{fontSize:8,fontWeight:800,background:tc+"20",color:tc,border:"1px solid "+tc+"35",borderRadius:3,padding:"0 3px"}}>{t}</span>}<button onClick={()=>{setEditId(c.id);setEditMat(c.matricola);}} style={{background:"none",border:"none",color:"#444",cursor:"pointer",fontSize:10,padding:"0 2px"}}>✏️</button></>}
+              </div>
+            </div>
+            <button onClick={()=>removeC(c.id)} style={{background:"none",border:"none",color:"rgba(239,68,68,.4)",cursor:"pointer",fontSize:13,padding:"0 2px",flexShrink:0}}>✕</button>
+          </div>;})}
+      </div>
+      <details style={{marginTop:10}}>
+        <summary style={{fontSize:12,color:"#555",cursor:"pointer",fontWeight:700,padding:"6px 0",userSelect:"none"}}>➕ Aggiungi collega manualmente</summary>
+        <div style={{display:"flex",gap:8,marginTop:8}}>
+          <input id="cn-n" placeholder="Nome Cognome" style={{flex:2,background:"rgba(255,255,255,.06)",border:"1px solid rgba(255,255,255,.1)",borderRadius:8,padding:"8px 10px",color:"#E2E2F0",fontFamily:"'Syne',sans-serif",fontSize:12,outline:"none"}}/>
+          <input id="cn-m" placeholder="Matr." style={{flex:1,background:"rgba(255,255,255,.06)",border:"1px solid rgba(255,255,255,.1)",borderRadius:8,padding:"8px 10px",color:"#E2E2F0",fontFamily:"'JetBrains Mono',monospace",fontSize:12,fontWeight:700,outline:"none"}}/>
+          <button onClick={()=>{const n=document.getElementById("cn-n")?.value||"",m=document.getElementById("cn-m")?.value||"";addC(n,m);if(document.getElementById("cn-n"))document.getElementById("cn-n").value="";if(document.getElementById("cn-m"))document.getElementById("cn-m").value="";}} style={{background:"rgba(99,102,241,.2)",border:"1px solid rgba(99,102,241,.4)",color:"#A5B4FC",padding:"8px 12px",borderRadius:8,cursor:"pointer",fontSize:12,fontWeight:800}}>+</button>
+        </div>
+      </details>
+    </div>
+  </div>);
+}
+
+// ─── STIPENDIO ────────────────────────────────────────────────────────────────
+function StipendioCalc({st,yr,mo,allShifts}){
+  const MESI=["Gennaio","Febbraio","Marzo","Aprile","Maggio","Giugno","Luglio","Agosto","Settembre","Ottobre","Novembre","Dicembre"];
+  const [tar,setTar]=useState(()=>{try{const s=localStorage.getItem("anm_tar");if(s)return JSON.parse(s);}catch(e){}return{base:12.50,str:18.75,dom:15.00,fest:18.75,not:1.50};});
+  const [showTar,setShowTar]=useState(false);
+  function saveTar(t){try{localStorage.setItem("anm_tar",JSON.stringify(t));}catch(e){}setTar(t);}
+  const fest=useMemo(()=>getFestivita(yr),[yr]);
+  const c=useMemo(()=>{
+    const pfx=`${yr}-${String(mo+1).padStart(2,"0")}`;
+    let oO=0,oS=0,oD=0,oF=0,oN=0,gg=0;
+    Object.entries(st.shifts).forEach(([key,val])=>{
+      if(!key.startsWith(pfx))return;
+      const sh=allShifts.find(x=>x.id===val.shiftId);if(!sh||!sh.start||!sh.end)return;
+      gg++;const h=calcH(sh.start,sh.end);
+      const d=parseInt(key.split("-")[2]),date=new Date(yr,mo,d),dow=(date.getDay()+6)%7;
+      const iF=!!fest[key],iD=dow===6,iN=(parseInt(sh.start.split(":")[0])||0)>=22||(parseInt(sh.start.split(":")[0])||0)<6;
+      if(iF)oF+=h;else if(iD)oD+=h;else if(h>8){oO+=8;oS+=(h-8);}else oO+=h;
+      if(iN)oN+=h;
+    });
+    return{oO,oS,oD,oF,oN,gg,tot:(oO*tar.base)+(oS*tar.str)+(oD*tar.dom)+(oF*tar.fest)+(oN*tar.not)};
+  },[st.shifts,yr,mo,allShifts,tar,fest]);
+  return (<div className="slide-up">
+    <div className="ph">💶 Stipendio</div>
+    <div className="ps">{MESI[mo]} {yr} · Stima ore lavorate</div>
+    <div style={{background:"linear-gradient(135deg,rgba(255,107,53,.12),rgba(255,60,172,.08))",border:"1px solid rgba(255,107,53,.25)",borderRadius:16,padding:"20px",marginBottom:14,textAlign:"center"}}>
+      <div style={{fontSize:11,color:"#FF6B35",fontWeight:700,textTransform:"uppercase",letterSpacing:".8px",marginBottom:6}}>Stima lorda mensile</div>
+      <div style={{fontSize:38,fontWeight:800,fontFamily:"'JetBrains Mono',monospace",color:"#E2E2F0",letterSpacing:-2}}>€{c.tot.toFixed(2)}</div>
+      <div style={{fontSize:11,color:"#555",marginTop:4}}>{c.gg} giorni lavorati</div>
+    </div>
+    <div style={{background:"rgba(255,255,255,.03)",border:"1px solid rgba(255,255,255,.07)",borderRadius:12,padding:"14px 16px",marginBottom:14}}>
+      <div style={{fontSize:10,fontWeight:700,color:"#444",textTransform:"uppercase",letterSpacing:".6px",marginBottom:12}}>Dettaglio ore</div>
+      {[["⏱ Ordinarie",c.oO,tar.base,"#E2E2F0"],["⚡ Straordinari",c.oS,tar.str,"#F59E0B"],["☀️ Domenicali",c.oD,tar.dom,"#EC4899"],["🎉 Festivi",c.oF,tar.fest,"#8B5CF6"],["🌙 Notturno",c.oN,tar.not,"#6366F1"]].map(([lbl,ore,t,col])=>(
+        ore>0&&<div key={lbl} style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:8}}>
+          <div><span style={{fontSize:13,fontWeight:600,color:col}}>{lbl}</span><span style={{fontSize:11,color:"#555",marginLeft:8}}>{ore.toFixed(1)}h × €{t.toFixed(2)}</span></div>
+          <span style={{fontFamily:"'JetBrains Mono',monospace",fontSize:13,fontWeight:700,color:col}}>€{(ore*t).toFixed(2)}</span>
+        </div>
+      ))}
+    </div>
+    <div style={{background:"rgba(255,255,255,.03)",border:"1px solid rgba(255,255,255,.07)",borderRadius:12,padding:"13px 15px",cursor:"pointer"}} onClick={()=>setShowTar(p=>!p)}>
+      <div style={{display:"flex",justifyContent:"space-between",alignItems:"center"}}>
+        <div><div style={{fontSize:14,fontWeight:700,color:"#E2E2F0"}}>⚙️ Configura tariffe</div><div style={{fontSize:11,color:"#555",marginTop:2}}>Modifica valori CCNL</div></div>
+        <span style={{color:"#555",opacity:.5}}>{showTar?"∨":"›"}</span>
+      </div>
+      {showTar&&<div style={{marginTop:12,display:"flex",flexDirection:"column",gap:10}}>
+        {[["base","Ordinario €/h"],["str","Straordinario €/h"],["dom","Domenicale €/h"],["fest","Festivo €/h"],["not","Notturno extra €/h"]].map(([k,lbl])=>(
+          <div key={k} style={{display:"flex",alignItems:"center",justifyContent:"space-between",gap:10}}>
+            <span style={{fontSize:13,color:"#aaa",flex:1}}>{lbl}</span>
+            <input type="number" step="0.01" value={tar[k]} onChange={e=>saveTar({...tar,[k]:parseFloat(e.target.value)||0})} style={{width:75,background:"rgba(255,255,255,.08)",border:"1px solid rgba(255,255,255,.15)",borderRadius:8,padding:"6px 10px",color:"#E2E2F0",fontFamily:"'JetBrains Mono',monospace",fontSize:14,fontWeight:700,outline:"none",textAlign:"right"}}/>
+          </div>
+        ))}
+        <div style={{fontSize:11,color:"#444",lineHeight:1.5}}>⚠️ Valori indicativi. Verifica sempre con il tuo cedolino.</div>
+      </div>}
+    </div>
+  </div>);
+}
+
+// ─── LOGIN ────────────────────────────────────────────────────────────────────
+function LoginApp({onLogin}){
+  const [mode,setMode]=useState("login");
+  const [mat,setMat]=useState(""); const [pwd,setPwd]=useState(""); const [err,setErr]=useState(""); const [busy,setBusy]=useState(false); const [rem,setRem]=useState(false);
+  const [rN,setRN]=useState(""); const [rM,setRM]=useState(""); const [rD,setRD]=useState(""); const [rP,setRP]=useState(""); const [rP2,setRP2]=useState("");
+  const [cM,setCM]=useState(""); const [cD,setCD]=useState(""); const [cP,setCP]=useState(""); const [cP2,setCP2]=useState(""); const [cOk,setCOk]=useState(false);
+  const [fN,setFN]=useState(""); const [fD,setFD]=useState(""); const [fR,setFR]=useState(null);
+  useEffect(()=>{try{const s=localStorage.getItem("anm_remember");if(s){const r=JSON.parse(s);if(r.mat)setMat(r.mat);if(r.pwd)setPwd(r.pwd);setRem(true);}}catch(e){};},[]);
+  function go(m){setMode(m);setErr("");}
+  async function doLogin(){
+    if(!mat.trim()||!pwd.trim()){setErr("Inserisci matricola e password");return;}
+    setBusy(true);setErr("");
+    const accs=getAccounts(),acc=accs[mat.trim()];
+    if(!acc){setErr("Matricola non trovata — registrati");setBusy(false);return;}
+    if(await sha256(pwd)!==acc.pwdHash){setErr("Password errata");setBusy(false);return;}
+    if(rem)try{localStorage.setItem("anm_remember",JSON.stringify({mat:mat.trim(),pwd}));}catch(e){}
+    else try{localStorage.removeItem("anm_remember");}catch(e){}
+    setSession(mat.trim());logAccess(mat.trim(),acc.nome);onLogin(mat.trim());setBusy(false);
+  }
+  async function doReg(){
+    if(!rN.trim()||!rM.trim()||!rD||!rP||!rP2){setErr("Compila tutti i campi");return;}
+    if(rP!==rP2){setErr("Password non coincidono");return;}
+    if(rP.length<4){setErr("Min. 4 caratteri");return;}
+    setBusy(true);setErr("");
+    const accs=getAccounts();
+    if(accs[rM.trim()]){setErr("Matricola già registrata");setBusy(false);return;}
+    const h=await sha256(rP);
+    accs[rM.trim()]={pwdHash:h,dob:rD,nome:rN.trim(),isAdmin:false,createdAt:Date.now()};
+    setAccounts(accs);setSession(rM.trim());logAccess(rM.trim(),rN.trim());onLogin(rM.trim());setBusy(false);
+  }
+  async function doRec(){
+    if(!cM.trim()||!cD||!cP||!cP2){setErr("Compila tutti i campi");return;}
+    if(cP!==cP2){setErr("Password non coincidono");return;}
+    if(cP.length<4){setErr("Min. 4 caratteri");return;}
+    setBusy(true);setErr("");
+    const accs=getAccounts(),acc=accs[cM.trim()];
+    if(!acc){setErr("Matricola non trovata");setBusy(false);return;}
+    if(acc.dob!==cD){setErr("Data di nascita errata");setBusy(false);return;}
+    accs[cM.trim()]={...acc,pwdHash:await sha256(cP)};setAccounts(accs);
+    setCOk(true);setBusy(false);
+  }
+  function cercaM(){
+    if(!fN.trim()||!fD){setErr("Inserisci nome e data");return;}
+    const found=Object.entries(getAccounts()).find(([m,a])=>a.nome&&a.nome.toLowerCase()===fN.trim().toLowerCase()&&a.dob===fD);
+    if(found){setFR(found[0]);setErr("");}else{setErr("Account non trovato");setFR(null);}
+  }
+  const tipoM=rM.length>=5?getTipo(rM):"";
+  const tc=tipoM==="ANM"?"#3B82F6":tipoM==="INT"?"#F59E0B":"transparent";
+  const Hdr=()=><div className="ls-hdr"><ANMLogo size={26}/><span className="ls-hdr-r">INTRANET</span></div>;
+  const Ftr=()=><div className="ls-ftr"><span className="ls-ftr-t">Powered by ANM spa · ICT · Mobile</span></div>;
+
+  if(mode==="reg") return (<div className="ls"><Hdr/><div className="ls-body"><div className="ls-card">
+    <div className="ls-tit">Registrazione</div>
+    <label className="ls-lbl">Nome e cognome</label><input className="ls-inp" value={rN} onChange={e=>{setRN(e.target.value);setErr("");}} style={{fontFamily:"Arial,sans-serif"}} placeholder="Mario Rossi"/>
+    <label className="ls-lbl">Matricola {tipoM&&<span style={{fontSize:9,background:tc+"22",color:tc,border:"1px solid "+tc+"44",borderRadius:3,padding:"0 5px",marginLeft:4}}>{tipoM}</span>}</label><input className="ls-inp" value={rM} onChange={e=>{setRM(e.target.value.replace(/\D/g,""));setErr("");}} inputMode="numeric" maxLength={8}/>
+    <label className="ls-lbl">Data di nascita (per recupero)</label><input className="ls-inp" type="date" value={rD} onChange={e=>{setRD(e.target.value);setErr("");}} style={{fontFamily:"Arial,sans-serif"}}/>
+    <label className="ls-lbl">Password</label><input className="ls-inp" type="password" placeholder="Min. 4 caratteri" value={rP} onChange={e=>{setRP(e.target.value);setErr("");}}/>
+    <label className="ls-lbl">Conferma password</label><input className={"ls-inp"+(rP2&&rP2!==rP?" er":"")} type="password" placeholder="Ripeti" value={rP2} onChange={e=>{setRP2(e.target.value);setErr("");}} onKeyDown={e=>e.key==="Enter"&&doReg()}/>
+    {err&&<div className="ls-err">{err}</div>}
+    <div className="ls-row"><button className="ls-btn" onClick={doReg} disabled={busy}>{busy?"Attendere…":"Registra"}</button><button className="ls-btn2" onClick={()=>go("login")}>Annulla</button></div>
+    <button className="ls-lnk" onClick={()=>go("login")}>← Torna al login</button>
+  </div></div><Ftr/></div>);
+
+  if(mode==="rec") return (<div className="ls"><Hdr/><div className="ls-body"><div className="ls-card">
+    {cOk?<><div className="ls-tit">Password aggiornata</div><div style={{fontSize:13,color:"#007700",fontWeight:600,marginBottom:16}}>✅ Ora puoi accedere con la nuova password.</div><button className="ls-btn" onClick={()=>{go("login");setCOk(false);setCM("");setCD("");setCP("");setCP2("");}}>Vai al login</button></> 
+    :<><div className="ls-tit">Recupera password</div>
+    <label className="ls-lbl">Matricola</label><input className="ls-inp" value={cM} onChange={e=>{setCM(e.target.value.replace(/\D/g,""));setErr("");}} inputMode="numeric" maxLength={8}/>
+    <label className="ls-lbl">Data di nascita</label><input className="ls-inp" type="date" value={cD} onChange={e=>{setCD(e.target.value);setErr("");}} style={{fontFamily:"Arial,sans-serif"}}/>
+    <label className="ls-lbl">Nuova password</label><input className="ls-inp" type="password" value={cP} onChange={e=>{setCP(e.target.value);setErr("");}}/>
+    <label className="ls-lbl">Conferma</label><input className={"ls-inp"+(cP2&&cP2!==cP?" er":"")} type="password" value={cP2} onChange={e=>{setCP2(e.target.value);setErr("");}} onKeyDown={e=>e.key==="Enter"&&doRec()}/>
+    {err&&<div className="ls-err">{err}</div>}
+    <div className="ls-row"><button className="ls-btn" onClick={doRec} disabled={busy}>{busy?"Verifica…":"Reimposta"}</button><button className="ls-btn2" onClick={()=>go("login")}>Annulla</button></div>
+    <button className="ls-lnk" onClick={()=>go("login")}>← Torna al login</button></>}
+  </div></div><Ftr/></div>);
+
+  if(mode==="find") return (<div className="ls"><Hdr/><div className="ls-body"><div className="ls-card">
+    <div className="ls-tit">Recupera matricola</div>
+    {fR?<><div style={{background:"#f0fff0",border:"1px solid #007700",padding:"14px",marginBottom:14}}><div style={{fontSize:12,color:"#007700",fontWeight:700,marginBottom:6}}>✅ Trovato!</div><div style={{fontSize:13,color:"#222"}}>La tua matricola è:</div><div style={{fontSize:28,fontWeight:900,color:"#1a1f8c",fontFamily:"Courier New,monospace",letterSpacing:2,marginTop:4}}>{fR}</div></div>
+    <div className="ls-row"><button className="ls-btn" onClick={()=>{go("login");setFR(null);setFN("");setFD("");}}>Vai al login</button><button className="ls-btn2" onClick={()=>go("rec")}>Reset password</button></div></>
+    :<><div style={{fontSize:12,color:"#555",fontFamily:"Arial,sans-serif",marginBottom:14,lineHeight:1.5}}>Inserisci il nome usato alla registrazione e la data di nascita.</div>
+    <label className="ls-lbl">Nome e cognome</label><input className="ls-inp" value={fN} onChange={e=>{setFN(e.target.value);setErr("");}} style={{fontFamily:"Arial,sans-serif"}}/>
+    <label className="ls-lbl">Data di nascita</label><input className="ls-inp" type="date" value={fD} onChange={e=>{setFD(e.target.value);setErr("");}} style={{fontFamily:"Arial,sans-serif"}} onKeyDown={e=>e.key==="Enter"&&cercaM()}/>
+    {err&&<div className="ls-err">{err}</div>}
+    <div className="ls-row"><button className="ls-btn" onClick={cercaM}>Cerca</button><button className="ls-btn2" onClick={()=>go("login")}>Annulla</button></div>
+    <button className="ls-lnk" onClick={()=>go("login")}>← Torna al login</button></>}
+  </div></div><Ftr/></div>);
+
+  return (<div className="ls"><Hdr/><div className="ls-body"><div className="ls-card">
+    <div className="ls-tit">Accesso all'app operatori</div>
+    <label className="ls-lbl">Matricola</label>
+    <input className="ls-inp" value={mat} onChange={e=>{setMat(e.target.value.replace(/\D/g,""));setErr("");}} onKeyDown={e=>e.key==="Enter"&&doLogin()} inputMode="numeric" maxLength={8} autoComplete="username" autoFocus/>
+    <label className="ls-lbl">Password</label>
+    <input className="ls-inp" type="password" value={pwd} onChange={e=>{setPwd(e.target.value);setErr("");}} onKeyDown={e=>e.key==="Enter"&&doLogin()} autoComplete="current-password"/>
+    {err&&<div className="ls-err">{err}</div>}
+    <label className="ls-rem"><input type="checkbox" checked={rem} onChange={e=>setRem(e.target.checked)}/><span>Ricorda su questo dispositivo</span></label>
+    <div className="ls-row"><button className="ls-btn" onClick={doLogin} disabled={busy}>{busy?"Accesso…":"Invia"}</button><button className="ls-btn2" onClick={()=>{setMat("");setPwd("");setErr("");setRem(false);try{localStorage.removeItem("anm_remember");}catch(e){};}}>Annulla</button></div>
+    <hr className="ls-sep"/>
+    <button className="ls-lnk" onClick={()=>go("reg")}>Primo accesso? Registrati</button>
+    <button className="ls-lnk" onClick={()=>go("rec")}>🔑 Password dimenticata</button>
+    <button className="ls-lnk" onClick={()=>go("find")}>👤 Matricola dimenticata</button>
+  </div></div><Ftr/></div>);
+}
+
+// ─── APP ROOT ─────────────────────────────────────────────────────────────────
+function AppRoot(){
+  const [utente,setUtente]     = useState(()=>getSession());
+  const [darkMode,setDarkMode] = useState(()=>{try{const s=localStorage.getItem("anm_theme");if(s)return s==="dark";}catch(e){}return window.matchMedia("(prefers-color-scheme:dark)").matches;});
+  const [pinLocked,setPinLocked] = useState(false);
+  const [avviso,setAvviso]       = useState("");
+  const [showAvv,setShowAvv]     = useState(false);
+  const lastAct = useRef(Date.now());
+
+  function toggleTheme(){setDarkMode(d=>{const n=!d;try{localStorage.setItem("anm_theme",n?"dark":"light");}catch(e){}return n;});}
+
+  useEffect(()=>{
+    const pin=()=>{try{return localStorage.getItem("anm_pin")||"";}catch(e){return "";}};
+    const chk=()=>{if(!pin())return;if(Date.now()-lastAct.current>5*60*1000)setPinLocked(true);};
+    const touch=()=>{lastAct.current=Date.now();};
+    const iv=setInterval(chk,30000);
+    ["touchstart","click","keydown"].forEach(ev=>window.addEventListener(ev,touch));
+    return()=>{clearInterval(iv);["touchstart","click","keydown"].forEach(ev=>window.removeEventListener(ev,touch));};
+  },[]);
+
+  useEffect(()=>{
+    if(!utente)return;
+    try{const a=localStorage.getItem("anm_avviso"),seen=localStorage.getItem("anm_avviso_seen");if(a&&a!==seen){setAvviso(a);setShowAvv(true);}}catch(e){}
+  },[utente]);
+
+  function dismissAvv(){try{localStorage.setItem("anm_avviso_seen",avviso);}catch(e){}setShowAvv(false);}
+
+  if(!utente) return <LoginApp onLogin={m=>{setUtente(m);setSession(m);}}/>;
+  if(pinLocked) return <PinScreen onUnlock={()=>{setPinLocked(false);lastAct.current=Date.now();}}/>;
+
+  return (<>
+    {showAvv&&<div style={{position:"fixed",inset:0,background:"rgba(0,0,0,.8)",zIndex:8500,display:"flex",alignItems:"center",justifyContent:"center",padding:20}}>
+      <div style={{background:"#0e0e1e",border:"1px solid rgba(255,107,53,.4)",borderRadius:20,padding:24,maxWidth:340,width:"100%"}}>
+        <div style={{fontSize:10,fontWeight:800,color:"#FF6B35",textTransform:"uppercase",letterSpacing:".8px",marginBottom:10}}>📢 Comunicazione dal responsabile</div>
+        <div style={{fontSize:15,color:"#E2E2F0",lineHeight:1.6,marginBottom:20}}>{avviso}</div>
+        <button onClick={dismissAvv} style={{width:"100%",background:"linear-gradient(135deg,#FF6B35,#FF3CAC)",border:"none",color:"white",padding:"13px",borderRadius:11,cursor:"pointer",fontFamily:"'Syne',sans-serif",fontWeight:800,fontSize:14}}>Ho letto ✓</button>
+      </div>
+    </div>}
+    <ANMOperator utente={utente} darkMode={darkMode} toggleTheme={toggleTheme} onLogout={()=>{setSession(null);setUtente(null);try{localStorage.removeItem("anm_remember");}catch(e){}}}/>
+  </>);
+}
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(React.createElement(ANMOperator));
+root.render(React.createElement(AppRoot));
+</script>
+
+<script>
+// Carica e trasforma il JSX in modo lazy dopo il DOM
+window.addEventListener('load', function() {
+  var src = document.getElementById('app-src').textContent;
+  var transformed;
+  try {
+    transformed = Babel.transform(src, {
+      presets: ['react'],
+      plugins: []
+    }).code;
+  } catch(e) {
+    document.getElementById('root').innerHTML =
+      '<div style="color:red;padding:20px;font-family:monospace">Errore: ' + e.message + '</div>';
+    return;
+  }
+  var s = document.createElement('script');
+  s.textContent = transformed;
+  document.body.appendChild(s);
+});
 </script>
 </body>
 </html>
